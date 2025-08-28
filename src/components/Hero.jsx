@@ -28,7 +28,7 @@ const Hero = () => {
               <a href="#contact" className="bg-white text-primary-600 hover:bg-gray-100 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-center btn-arabic text-sm sm:text-base">
                 {t('hero.cta')}
               </a>
-              <a href="#services" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-300 text-center btn-arabic text-sm sm:text-base">
+              <a href="#features" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-300 text-center btn-arabic text-sm sm:text-base">
                 {t('nav.services')}
               </a>
             </div>
@@ -54,39 +54,39 @@ const Hero = () => {
           <div className="relative animate-slide-up">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20">
               <div className="space-y-4 sm:space-y-6">
-                <div className="flex items-center space-x-3 sm:space-x-4 rtl:flex-row-reverse rtl:space-x-reverse">
+                <div className="flex items-center space-x-3 sm:space-x-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                     </svg>
                   </div>
-                  <div className="flex-1 text-right">
-                    <h3 className="text-base sm:text-lg font-semibold title-arabic">{t('services.recharge.title')}</h3>
-                    <p className="text-sm sm:text-base text-blue-200 text-arabic">{t('services.recharge.description')}</p>
+                  <div className="flex-1 rtl:text-right ltr:text-left">
+                    <h3 className="text-base sm:text-lg font-semibold title-arabic rtl:text-right ltr:text-left">{t('services.recharge.title')}</h3>
+                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left">{t('services.recharge.description')}</p>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-3 sm:space-x-4 rtl:flex-row-reverse rtl:space-x-reverse">
+                <div className="flex items-center space-x-3 sm:space-x-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <div className="flex-1 text-right">
-                    <h3 className="text-base sm:text-lg font-semibold title-arabic">{t('services.deposit.title')}</h3>
-                    <p className="text-sm sm:text-base text-blue-200 text-arabic">{t('services.deposit.description')}</p>
+                  <div className="flex-1 rtl:text-right ltr:text-left">
+                    <h3 className="text-base sm:text-lg font-semibold title-arabic rtl:text-right ltr:text-left">{t('services.deposit.title')}</h3>
+                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left">{t('services.deposit.description')}</p>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-3 sm:space-x-4 rtl:flex-row-reverse rtl:space-x-reverse">
+                <div className="flex items-center space-x-3 sm:space-x-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-400 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <div className="flex-1 text-right">
-                    <h3 className="text-base sm:text-lg font-semibold title-arabic">{t('features.support.title')}</h3>
-                    <p className="text-sm sm:text-base text-blue-200 text-arabic">{t('features.support.description')}</p>
+                  <div className="flex-1 rtl:text-right ltr:text-left">
+                    <h3 className="text-base sm:text-lg font-semibold title-arabic rtl:text-right ltr:text-left">{t('features.support.title')}</h3>
+                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left">{t('features.support.description')}</p>
                   </div>
                 </div>
               </div>

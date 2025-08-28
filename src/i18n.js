@@ -25,15 +25,16 @@ i18n
   .init({
     resources,
     fallbackLng: 'ar',
-    debug: false,
+    debug: true,
 
     interpolation: {
       escapeValue: false, // React already does escaping
     },
 
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      order: ['localStorage', 'htmlTag'],
       caches: ['localStorage'],
+      lookupLocalStorage: 'i18nextLng',
     },
 
     react: {
@@ -63,6 +64,11 @@ const initializeRTL = () => {
     document.body.classList.remove('rtl');
   }
 };
+
+// Forcer l'arabe comme langue par défaut
+if (!localStorage.getItem('i18nextLng')) {
+  localStorage.setItem('i18nextLng', 'ar');
+}
 
 // Initialiser RTL au démarrage
 initializeRTL();

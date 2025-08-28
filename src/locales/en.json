@@ -25,7 +25,6 @@
     "learnMore": "Learn More"
   },
   "features": {
-    "title": "Why choose Chargify?",
     "subtitle": "Your trusted partner for 1xbet",
     "whyChoose": "Why Choose Chargify?",
     "howItWorks": "How it works",
@@ -48,9 +47,7 @@
     }
   },
   "services": {
-    "title": "Our Premium Services",
     "subtitle": "Complete solutions for your needs",
-    "premium": "Our Premium Services",
     "readyToStart": "Ready to start?",
     "deposit": {
       "title": "Deposit",
@@ -63,6 +60,39 @@
     "recharge": {
       "title": "Recharge",
       "description": "Recharge your account anytime"
+    },
+    "accountRecharge": {
+      "title": "Account Recharge",
+      "description": "Recharge your 1xbet account instantly with our secure payment methods. Processing in less than 5 minutes.",
+      "features": [
+        "Payment by ID",
+        "Fast processing",
+        "24/7 Support",
+        "Secure",
+        "Learn more"
+      ]
+    },
+    "moneyDeposit": {
+      "title": "Money Deposit",
+      "description": "Make deposits to your 1xbet account securely and quickly. Multiple payment methods available.",
+      "features": [
+        "Multiple methods",
+        "Quick confirmation",
+        "Detailed history",
+        "Reduced fees",
+        "Learn more"
+      ]
+    },
+    "moneyWithdrawal": {
+      "title": "Money Withdrawal",
+      "description": "Withdraw your winnings quickly and securely. Optimized withdrawal service for a smooth experience.",
+      "features": [
+        "Fast withdrawal",
+        "ID verification",
+        "Dedicated support",
+        "Maximum security",
+        "Learn more"
+      ]
     }
   },
   "howItWorks": {
@@ -103,7 +133,6 @@
   "footer": {
     "description": "Your trusted partner for all your 1xbet transactions",
     "quickLinks": "Quick Links",
-    "services": "Services",
     "support": "Support",
     "legal": "Legal",
     "privacy": "Privacy Policy",

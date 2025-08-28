@@ -26,11 +26,8 @@ const Header = () => {
 
           {/* Desktop Navigation - Center */}
           <nav className={`hidden md:flex ${isRTL ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
-            <a href="#services" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
-              {t('nav.services')}
-            </a>
             <a href="#features" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
-              {t('features.title')}
+              {t('nav.services')}
             </a>
             <a href="#how-it-works" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
               {t('howItWorks.title')}
@@ -73,18 +70,11 @@ const Header = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
               <a
-                href="#services"
-                className="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {t('nav.services')}
-              </a>
-              <a
                 href="#features"
                 className="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t('features.title')}
+                {t('nav.services')}
               </a>
               <a
                 href="#how-it-works"

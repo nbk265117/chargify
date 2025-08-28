@@ -25,7 +25,6 @@
     "learnMore": "En savoir plus"
   },
   "features": {
-    "title": "Pourquoi choisir Chargify ?",
     "subtitle": "Votre partenaire de confiance pour 1xbet",
     "whyChoose": "Pourquoi Choisir Chargify ?",
     "howItWorks": "Comment ça marche",
@@ -48,9 +47,7 @@
     }
   },
   "services": {
-    "title": "Nos Services Premium",
     "subtitle": "Solutions complètes pour vos besoins",
-    "premium": "Nos Services Premium",
     "readyToStart": "Prêt à commencer ?",
     "deposit": {
       "title": "Dépôt",
@@ -63,6 +60,39 @@
     "recharge": {
       "title": "Recharge",
       "description": "Rechargez votre compte à tout moment"
+    },
+    "accountRecharge": {
+      "title": "Recharge de Compte",
+      "description": "Rechargez votre compte 1xbet instantanément avec nos méthodes de paiement sécurisées. Traitement en moins de 5 minutes.",
+      "features": [
+        "Paiement par ID",
+        "Traitement rapide",
+        "Support 24/7",
+        "Sécurisé",
+        "En savoir plus"
+      ]
+    },
+    "moneyDeposit": {
+      "title": "Dépôt d'Argent",
+      "description": "Effectuez des dépôts sur votre compte 1xbet de manière sécurisée et rapide. Plusieurs méthodes de paiement disponibles.",
+      "features": [
+        "Méthodes multiples",
+        "Confirmation rapide",
+        "Historique détaillé",
+        "Frais réduits",
+        "En savoir plus"
+      ]
+    },
+    "moneyWithdrawal": {
+      "title": "Retrait d'Argent",
+      "description": "Retirez vos gains rapidement et en toute sécurité. Service de retrait optimisé pour une expérience fluide.",
+      "features": [
+        "Retrait rapide",
+        "Vérification ID",
+        "Support dédié",
+        "Sécurité maximale",
+        "En savoir plus"
+      ]
     }
   },
   "howItWorks": {
@@ -103,7 +133,6 @@
   "footer": {
     "description": "Votre partenaire de confiance pour toutes vos transactions 1xbet",
     "quickLinks": "Liens rapides",
-    "services": "Services",
     "support": "Support",
     "legal": "Mentions légales",
     "privacy": "Politique de confidentialité",

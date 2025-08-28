@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
-import Services from './components/Services'
 import Features from './components/Features'
 import HowItWorks from './components/HowItWorks'
 import Testimonials from './components/Testimonials'
@@ -17,7 +16,6 @@ function App() {
       <div className="min-h-screen bg-gray-50 w-full overflow-x-hidden" style={{ maxWidth: '100vw' }}>
         <Header />
         <Hero />
-        <Services />
         <Features />
         <HowItWorks />
         <Testimonials />

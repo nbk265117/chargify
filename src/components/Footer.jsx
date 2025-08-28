@@ -7,9 +7,9 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: t('services.recharge.title'), href: "#services" },
-      { name: t('services.deposit.title'), href: "#services" },
-      { name: t('services.withdrawal.title'), href: "#services" },
+      { name: t('services.recharge.title'), href: "#features" },
+      { name: t('services.deposit.title'), href: "#features" },
+      { name: t('services.withdrawal.title'), href: "#features" },
       { name: t('features.support.title'), href: "#contact" }
     ],
     company: [
@@ -168,18 +168,6 @@ const Footer = () => {
                 <span>Rapide</span>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Disclaimer */}
-        <div className="mt-8 pt-8 border-t border-gray-800">
-          <div className="text-center text-xs text-gray-500">
-            <p className="mb-2">
-              Chargify est un partenaire indépendant de 1xbet. Nous ne sommes pas affiliés à 1xbet et agissons en tant que service tiers.
-            </p>
-            <p>
-              Les transactions sont effectuées selon nos conditions de service. Veuillez lire attentivement nos conditions d'utilisation.
-            </p>
           </div>
         </div>
       </div>
