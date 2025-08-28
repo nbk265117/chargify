@@ -55,21 +55,42 @@ const HowItWorks = () => {
 
         {/* Steps */}
         <div className="relative">
-          {/* Connection Line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 via-green-500 to-purple-500 transform -translate-y-1/2 z-0"></div>
+          {/* Connection Line - Improved Design */}
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 transform -translate-y-1/2 z-0">
+            {/* Main gradient line */}
+            <div className="h-1 bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-400 rounded-full shadow-lg"></div>
+            {/* Animated dots */}
+            <div className="absolute top-0 left-1/3 w-3 h-3 bg-emerald-400 rounded-full animate-pulse shadow-lg transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div className="absolute top-0 left-2/3 w-3 h-3 bg-purple-400 rounded-full animate-pulse shadow-lg transform -translate-x-1/2 -translate-y-1/2"></div>
+            {/* Glow effect */}
+            <div className="absolute inset-0 h-1 bg-gradient-to-r from-blue-400/20 via-emerald-400/20 to-purple-400/20 rounded-full blur-sm"></div>
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             {steps.map((step, index) => (
               <div key={step.id} className="relative z-10">
+                {/* Mobile Arrow */}
+                {index < steps.length - 1 && (
+                  <div className="lg:hidden flex justify-center mb-6">
+                    <div className="w-8 h-8 bg-gradient-to-b from-gray-200 to-gray-300 rounded-full flex items-center justify-center shadow-md">
+                      <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      </svg>
+                    </div>
+                  </div>
+                )}
+                
                 <div className="text-center">
-                  {/* Step Number */}
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-white border-4 border-gray-200 rounded-full mb-6 relative">
-                    <div className={`${step.color} text-white w-12 h-12 rounded-full flex items-center justify-center`}>
+                  {/* Step Number - Improved Design */}
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-white border-4 border-gray-100 rounded-full mb-6 relative shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <div className={`${step.color} text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg`}>
                       {step.icon}
                     </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                    <div className="absolute -top-3 -right-3 w-8 h-8 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold shadow-lg">
                       {step.id}
                     </div>
+                    {/* Glow effect */}
+                    <div className={`absolute inset-0 ${step.color.replace('bg-', 'bg-').replace('-500', '-400')} rounded-full opacity-20 blur-lg`}></div>
                   </div>
 
                   {/* Content */}
