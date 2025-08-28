@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "Chargify - Partenaire Officiel 1xbet",
+    "description": "La solution complète pour vos transactions 1xbet. Rechargez votre compte, effectuez des dépôts et retraits en toute sécurité.",
+    "keywords": "1xbet, dépôt, retrait, recharge, transactions, sécurité, rapidité",
+    "author": "Chargify",
+    "ogTitle": "Chargify - Partenaire Officiel 1xbet",
+    "ogDescription": "La solution complète pour vos transactions 1xbet. Rechargez votre compte, effectuez des dépôts et retraits en toute sécurité.",
+    "ogImage": "/og-image-fr.jpg",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "Chargify - Partenaire Officiel 1xbet",
+    "twitterDescription": "La solution complète pour vos transactions 1xbet"
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Partenaire Officiel 1xbet",
+    "subtitle": "Recharge, Dépôt, Retrait",
+    "description": "La solution complète pour vos transactions 1xbet. Rechargez votre compte, effectuez des dépôts et retraits en toute sécurité.",
+    "cta": "Commencer maintenant",
+    "learnMore": "En savoir plus"
+  },
+  "features": {
+    "title": "Pourquoi choisir Chargify ?",
+    "subtitle": "Votre partenaire de confiance pour 1xbet",
+    "whyChoose": "Pourquoi Choisir Chargify ?",
+    "howItWorks": "Comment ça marche",
+    "startToday": "Commencez dès aujourd'hui et profitez de nos services premium pour vos transactions 1xbet",
+    "security": {
+      "title": "Sécurité maximale",
+      "description": "Transactions sécurisées avec cryptage SSL et protection des données"
+    },
+    "speed": {
+      "title": "Rapidité",
+      "description": "Transactions instantanées, pas d'attente"
+    },
+    "support": {
+      "title": "Support 24/7",
+      "description": "Assistance disponible à tout moment"
+    },
+    "fees": {
+      "title": "Frais réduits",
+      "description": "Tarifs compétitifs et transparents"
+    }
+  },
+  "services": {
+    "title": "Nos Services Premium",
+    "subtitle": "Solutions complètes pour vos besoins",
+    "premium": "Nos Services Premium",
+    "readyToStart": "Prêt à commencer ?",
+    "deposit": {
+      "title": "Dépôt",
+      "description": "Rechargez votre compte 1xbet rapidement et en toute sécurité"
+    },
+    "withdrawal": {
+      "title": "Retrait",
+      "description": "Retirez vos gains facilement et rapidement"
+    },
+    "recharge": {
+      "title": "Recharge",
+      "description": "Rechargez votre compte à tout moment"
+    }
+  },
+  "howItWorks": {
+    "title": "Comment ça marche ?",
+    "subtitle": "Processus simple en 3 étapes",
+    "detailedProcess": "Processus Détaillé",
+    "readyToTry": "Prêt à Essayer ?",
+    "step1": {
+      "title": "Inscription",
+      "description": "Créez votre compte en quelques minutes"
+    },
+    "step2": {
+      "title": "Vérification",
+      "description": "Vérifiez votre identité rapidement"
+    },
+    "step3": {
+      "title": "Transaction",
+      "description": "Effectuez vos transactions en toute sécurité"
+    }
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "subtitle": "Témoignages de confiance",
+    "whatOurClientsSay": "Ce que disent nos clients",
+    "joinSatisfiedClients": "Rejoignez nos clients satisfaits"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous sommes là pour vous aider",
+    "readyToStart": "Prêt à commencer ? Contactez-nous dès maintenant pour vos transactions 1xbet",
+    "name": "Nom complet",
+    "email": "Adresse e-mail",
+    "message": "Message",
+    "send": "Envoyer",
+    "phone": "Téléphone",
+    "address": "Adresse"
+  },
+  "footer": {
+    "description": "Votre partenaire de confiance pour toutes vos transactions 1xbet",
+    "quickLinks": "Liens rapides",
+    "services": "Services",
+    "support": "Support",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "howItWorks": "Comment ça marche",
+    "copyright": "© 2024 Chargify. Tous droits réservés."
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "close": "Fermer",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Soumettre",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "refresh": "Actualiser",
+    "download": "Télécharger",
+    "upload": "Téléverser",
+    "print": "Imprimer",
+    "share": "Partager"
+  }
+}

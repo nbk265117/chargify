@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "Chargify - Official 1xbet Partner",
+    "description": "The complete solution for your 1xbet transactions. Recharge your account, make deposits and withdrawals securely.",
+    "keywords": "1xbet, deposit, withdrawal, recharge, transactions, security, speed",
+    "author": "Chargify",
+    "ogTitle": "Chargify - Official 1xbet Partner",
+    "ogDescription": "The complete solution for your 1xbet transactions. Recharge your account, make deposits and withdrawals securely.",
+    "ogImage": "/og-image-en.jpg",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "Chargify - Official 1xbet Partner",
+    "twitterDescription": "The complete solution for your 1xbet transactions"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Official 1xbet Partner",
+    "subtitle": "Recharge, Deposit, Withdrawal",
+    "description": "The complete solution for your 1xbet transactions. Recharge your account, make deposits and withdrawals securely.",
+    "cta": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "features": {
+    "title": "Why choose Chargify?",
+    "subtitle": "Your trusted partner for 1xbet",
+    "whyChoose": "Why Choose Chargify?",
+    "howItWorks": "How it works",
+    "startToday": "Start today and enjoy our premium services for your 1xbet transactions",
+    "security": {
+      "title": "Maximum Security",
+      "description": "Secure transactions with SSL encryption and data protection"
+    },
+    "speed": {
+      "title": "Speed",
+      "description": "Instant transactions, no waiting"
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "Assistance available anytime"
+    },
+    "fees": {
+      "title": "Reduced Fees",
+      "description": "Competitive and transparent rates"
+    }
+  },
+  "services": {
+    "title": "Our Premium Services",
+    "subtitle": "Complete solutions for your needs",
+    "premium": "Our Premium Services",
+    "readyToStart": "Ready to start?",
+    "deposit": {
+      "title": "Deposit",
+      "description": "Recharge your 1xbet account quickly and securely"
+    },
+    "withdrawal": {
+      "title": "Withdrawal",
+      "description": "Withdraw your winnings easily and quickly"
+    },
+    "recharge": {
+      "title": "Recharge",
+      "description": "Recharge your account anytime"
+    }
+  },
+  "howItWorks": {
+    "title": "How it works?",
+    "subtitle": "Simple process in 3 steps",
+    "detailedProcess": "Detailed Process",
+    "readyToTry": "Ready to Try?",
+    "step1": {
+      "title": "Registration",
+      "description": "Create your account in minutes"
+    },
+    "step2": {
+      "title": "Verification",
+      "description": "Verify your identity quickly"
+    },
+    "step3": {
+      "title": "Transaction",
+      "description": "Make your transactions securely"
+    }
+  },
+  "testimonials": {
+    "title": "What our clients say",
+    "subtitle": "Trust testimonials",
+    "whatOurClientsSay": "What our clients say",
+    "joinSatisfiedClients": "Join our satisfied clients"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We are here to help you",
+    "readyToStart": "Ready to start? Contact us now for your 1xbet transactions",
+    "name": "Full Name",
+    "email": "Email Address",
+    "message": "Message",
+    "send": "Send",
+    "phone": "Phone",
+    "address": "Address"
+  },
+  "footer": {
+    "description": "Your trusted partner for all your 1xbet transactions",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "support": "Support",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "howItWorks": "How it works",
+    "copyright": "© 2024 Chargify. All rights reserved."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "close": "Close",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "refresh": "Refresh",
+    "download": "Download",
+    "upload": "Upload",
+    "print": "Print",
+    "share": "Share"
+  }
+}

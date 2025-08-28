@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "Chargify - الشريك الرسمي لـ 1xbet",
+    "description": "الحل الشامل لمعاملاتك في 1xbet. إعادة الشحن، الإيداع، السحب بأمان وسرعة.",
+    "keywords": "1xbet, إيداع, سحب, إعادة شحن, معاملات, أمان, سرعة",
+    "author": "Chargify",
+    "ogTitle": "Chargify - الشريك الرسمي لـ 1xbet",
+    "ogDescription": "الحل الشامل لمعاملاتك في 1xbet. إعادة الشحن، الإيداع، السحب بأمان وسرعة.",
+    "ogImage": "/og-image-ar.jpg",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "Chargify - الشريك الرسمي لـ 1xbet",
+    "twitterDescription": "الحل الشامل لمعاملاتك في 1xbet"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "services": "الخدمات",
+    "about": "حول",
+    "contact": "اتصل بنا"
+  },
+  "hero": {
+    "title": "الشريك الرسمي لـ 1xbet",
+    "subtitle": "إعادة الشحن، الإيداع، السحب",
+    "description": "الحل الشامل لمعاملاتك في 1xbet. أعد شحن حسابك، قم بالإيداع والسحب بأمان.",
+    "cta": "ابدأ الآن",
+    "learnMore": "اعرف المزيد"
+  },
+  "features": {
+    "title": "لماذا تختار Chargify؟",
+    "subtitle": "شريكك الموثوق لـ 1xbet",
+    "whyChoose": "لماذا تختار Chargify؟",
+    "howItWorks": "كيف يعمل",
+    "startToday": "ابدأ اليوم واستمتع بخدماتنا المميزة لمعاملاتك في 1xbet",
+    "security": {
+      "title": "أقصى درجات الأمان",
+      "description": "معاملات آمنة مع تشفير SSL وحماية البيانات"
+    },
+    "speed": {
+      "title": "السرعة",
+      "description": "معاملات فورية، لا انتظار"
+    },
+    "support": {
+      "title": "الدعم 24/7",
+      "description": "المساعدة متاحة في أي وقت"
+    },
+    "fees": {
+      "title": "رسوم مخفضة",
+      "description": "أسعار تنافسية وشفافة"
+    }
+  },
+  "services": {
+    "title": "خدماتنا المميزة",
+    "subtitle": "حلول شاملة لاحتياجاتك",
+    "premium": "خدماتنا المميزة",
+    "readyToStart": "مستعد للبدء؟",
+    "deposit": {
+      "title": "الإيداع",
+      "description": "أعد شحن حسابك في 1xbet بسرعة وأمان"
+    },
+    "withdrawal": {
+      "title": "السحب",
+      "description": "اسحب أرباحك بسهولة وسرعة"
+    },
+    "recharge": {
+      "title": "إعادة الشحن",
+      "description": "أعد شحن حسابك في أي وقت"
+    }
+  },
+  "howItWorks": {
+    "title": "كيف يعمل؟",
+    "subtitle": "عملية بسيطة في 3 خطوات",
+    "detailedProcess": "عملية مفصلة",
+    "readyToTry": "مستعد للتجربة؟",
+    "step1": {
+      "title": "التسجيل",
+      "description": "أنشئ حسابك في دقائق"
+    },
+    "step2": {
+      "title": "التحقق",
+      "description": "تحقق من هويتك بسرعة"
+    },
+    "step3": {
+      "title": "المعاملة",
+      "description": "قم بمعاملاتك بأمان"
+    }
+  },
+  "testimonials": {
+    "title": "ماذا يقول عملاؤنا",
+    "subtitle": "شهادات الثقة",
+    "whatOurClientsSay": "ماذا يقول عملاؤنا",
+    "joinSatisfiedClients": "انضم إلى عملائنا الراضين"
+  },
+  "contact": {
+    "title": "اتصل بنا",
+    "subtitle": "نحن هنا لمساعدتك",
+    "readyToStart": "مستعد للبدء؟ اتصل بنا الآن لمعاملاتك في 1xbet",
+    "name": "الاسم الكامل",
+    "email": "عنوان البريد الإلكتروني",
+    "message": "الرسالة",
+    "send": "إرسال",
+    "phone": "الهاتف",
+    "address": "العنوان"
+  },
+  "footer": {
+    "description": "شريكك الموثوق لجميع معاملاتك في 1xbet",
+    "quickLinks": "روابط سريعة",
+    "services": "الخدمات",
+    "support": "الدعم",
+    "legal": "القانونية",
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الاستخدام",
+    "howItWorks": "كيف يعمل",
+    "copyright": "© 2024 Chargify. جميع الحقوق محفوظة."
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجح",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "view": "عرض",
+    "close": "إغلاق",
+    "next": "التالي",
+    "previous": "السابق",
+    "submit": "إرسال",
+    "search": "بحث",
+    "filter": "تصفية",
+    "sort": "ترتيب",
+    "refresh": "تحديث",
+    "download": "تحميل",
+    "upload": "رفع",
+    "print": "طباعة",
+    "share": "مشاركة"
+  }
+}

@@ -1,0 +1,171 @@
+/* Styles RTL pour l'arabe */
+.rtl {
+  direction: rtl;
+  text-align: right;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Police arabe pour tout le contenu RTL */
+.rtl * {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Gestion des flexbox en RTL */
+.rtl .flex:not(.flex-col):not(.flex-col-reverse) {
+  flex-direction: row-reverse;
+}
+
+.rtl .flex-row-reverse {
+  flex-direction: row;
+}
+
+.rtl .flex-row {
+  flex-direction: row-reverse;
+}
+
+.rtl .space-x-2 > * + * {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.rtl .space-x-3 > * + * {
+  margin-left: 0;
+  margin-right: 0.75rem;
+}
+
+.rtl .space-x-4 > * + * {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+.rtl .space-x-6 > * + * {
+  margin-left: 0;
+  margin-right: 1.5rem;
+}
+
+.rtl .space-x-8 > * + * {
+  margin-left: 0;
+  margin-right: 2rem;
+}
+
+.rtl .ml-auto {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.rtl .mr-auto {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.rtl .pl-4 {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+.rtl .pr-4 {
+  padding-right: 0;
+  padding-left: 1rem;
+}
+
+.rtl .text-left {
+  text-align: right;
+}
+
+.rtl .text-right {
+  text-align: left;
+}
+
+/* Ajustements pour les icônes et flèches */
+.rtl .rotate-180 {
+  transform: rotate(0deg);
+}
+
+.rtl .group-hover\:rotate-180 {
+  transform: rotate(0deg);
+}
+
+/* Ajustements pour les dropdowns */
+.rtl .absolute.right-0 {
+  right: auto;
+  left: 0;
+}
+
+/* Ajustements pour les grilles */
+.rtl .grid-cols-1 > *,
+.rtl .grid-cols-2 > *,
+.rtl .grid-cols-3 > *,
+.rtl .grid-cols-4 > * {
+  direction: rtl;
+}
+
+/* Ajustements pour les formulaires */
+.rtl input,
+.rtl textarea,
+.rtl select {
+  text-align: right;
+  direction: rtl;
+}
+
+.rtl input::placeholder,
+.rtl textarea::placeholder {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Ajustements pour les boutons */
+.rtl button {
+  direction: rtl;
+}
+
+/* Ajustements pour les listes */
+.rtl ul,
+.rtl ol {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+/* Ajustements pour les boutons avec icônes */
+.rtl .flex.items-center.space-x-2 {
+  flex-direction: row-reverse;
+}
+
+.rtl .flex.items-center.space-x-3 {
+  flex-direction: row-reverse;
+}
+
+/* Ajustements pour les cartes et sections */
+.rtl .bg-gradient-to-r {
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}
+
+.rtl .bg-gradient-to-l {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+/* Ajustements pour les animations */
+.rtl .animate-slide-in-right {
+  animation: slide-in-left 0.3s ease-out;
+}
+
+.rtl .animate-slide-in-left {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
