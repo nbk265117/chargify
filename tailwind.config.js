@@ -1,11 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        arabic: ['Cairo', 'Tajawal', 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+        cairo: ['Cairo', 'sans-serif'],
+        tajawal: ['Tajawal', 'sans-serif'],
+      },
       colors: {
         primary: {
           50: '#eff6ff',
@@ -32,14 +38,11 @@ module.exports = {
           900: '#0f172a',
         }
       },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        arabic: ['Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
-      },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
         'bounce-slow': 'bounce 2s infinite',
+        'pulse-slow': 'pulse 3s infinite',
       },
       keyframes: {
         fadeIn: {

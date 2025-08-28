@@ -14,7 +14,7 @@ function App() {
   return (
     <RTLWrapper>
       <SEO />
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 w-full overflow-x-hidden" style={{ maxWidth: '100vw' }}>
         <Header />
         <Hero />
         <Services />

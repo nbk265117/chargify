@@ -24,7 +24,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'fr',
+    fallbackLng: 'ar',
     debug: false,
 
     interpolation: {
@@ -41,8 +41,8 @@ i18n
     },
 
     // Configuration pour le RTL
-    supportedLngs: ['fr', 'en', 'ar'],
-    lng: 'fr',
+    supportedLngs: ['ar', 'fr', 'en'],
+    lng: 'ar',
     
     // Gestion automatique du RTL
     postProcess: ['rtl'],
@@ -50,7 +50,7 @@ i18n
 
 // Fonction pour initialiser la direction RTL
 const initializeRTL = () => {
-  const currentLang = i18n.language || 'fr';
+  const currentLang = i18n.language || 'ar';
   if (currentLang === 'ar') {
     document.documentElement.dir = 'rtl';
     document.documentElement.lang = 'ar';

@@ -13,20 +13,18 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="bg-white shadow-lg sticky top-0 w-full overflow-x-hidden" style={{ zIndex: '2147483646 !important' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full" style={{ maxWidth: '100vw' }}>
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-gradient">
-                Chargify
-              </h1>
-              <p className="text-xs text-gray-500">{t('hero.subtitle')}</p>
-            </div>
+          {/* Language Selector and CTA - Left side (Desktop) */}
+          <div className={`hidden md:flex items-center ${isRTL ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
+            <LanguageSelector />
+            <a href="#contact" className="btn-primary">
+              {t('hero.cta')}
+            </a>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Center */}
           <nav className={`hidden md:flex ${isRTL ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
             <a href="#services" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
               {t('nav.services')}
@@ -42,12 +40,14 @@ const Header = () => {
             </a>
           </nav>
 
-          {/* Language Selector and CTA */}
-          <div className={`hidden md:flex items-center ${isRTL ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
-            <LanguageSelector />
-            <a href="#contact" className="btn-primary">
-              {t('hero.cta')}
-            </a>
+          {/* Logo - Right side */}
+          <div className="flex items-center">
+            <div className="flex-shrink-0 text-right">
+              <h1 className="text-xl sm:text-2xl font-bold text-gradient">
+                Chargify
+              </h1>
+              <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -55,9 +55,9 @@ const Header = () => {
             <LanguageSelector />
             <button
               onClick={toggleMenu}
-              className="text-gray-700 hover:text-primary-600 focus:outline-none focus:text-primary-600"
+              className="text-gray-700 hover:text-primary-600 focus:outline-none focus:text-primary-600 p-2"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
