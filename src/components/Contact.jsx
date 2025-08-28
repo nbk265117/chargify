@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useRTL } from '../hooks/useRTL'
 
 const Contact = () => {
   const { t } = useTranslation();
+  const { isRTL } = useRTL();
   
   const [formData, setFormData] = useState({
     name: '',
@@ -23,7 +25,7 @@ const Contact = () => {
     e.preventDefault()
     // Ici vous pouvez ajouter la logique d'envoi du formulaire
     console.log('Form submitted:', formData)
-    alert('Merci pour votre message ! Nous vous contacterons bientôt.')
+    alert(t('contact.thankYouMessage'))
     setFormData({
       name: '',
       email: '',
@@ -70,27 +72,27 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className={`mb-16 ${isRTL ? 'text-right' : 'text-center'}`}>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             {t('contact.title')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className={`text-xl text-gray-600 max-w-3xl ${isRTL ? 'ml-auto' : 'mx-auto'}`}>
             {t('contact.readyToStart')}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 ${isRTL ? 'lg:grid-cols-2-reverse' : ''}`}>
           {/* Contact Form */}
-          <div className="bg-gray-50 rounded-2xl p-8">
+          <div className={`bg-gray-50 rounded-2xl p-8 ${isRTL ? 'text-right' : 'text-left'}`}>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Envoyez-nous un message
+              {t('contact.sendMessage')}
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nom complet *
+                    {t('contact.name')} *
                   </label>
                   <input
                     type="text"
@@ -99,14 +101,15 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300"
-                    placeholder="Votre nom complet"
+                    className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300 ${isRTL ? 'text-right' : 'text-left'}`}
+                    placeholder={t('contact.namePlaceholder')}
+                    dir={isRTL ? 'rtl' : 'ltr'}
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Téléphone *
+                    {t('contact.phone')} *
                   </label>
                   <input
                     type="tel"
@@ -115,15 +118,16 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300"
-                    placeholder="Votre numéro de téléphone"
+                    className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300 ${isRTL ? 'text-right' : 'text-left'}`}
+                    placeholder={t('contact.phonePlaceholder')}
+                    dir={isRTL ? 'rtl' : 'ltr'}
                   />
                 </div>
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
+                  {t('contact.email')}
                 </label>
                 <input
                   type="email"
@@ -131,14 +135,15 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300"
-                  placeholder="Votre adresse email"
+                  className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300 ${isRTL ? 'text-right' : 'text-left'}`}
+                  placeholder={t('contact.emailPlaceholder')}
+                  dir={isRTL ? 'rtl' : 'ltr'}
                 />
               </div>
 
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                  Service souhaité *
+                  {t('contact.service')} *
                 </label>
                 <select
                   id="service"
@@ -146,19 +151,20 @@ const Contact = () => {
                   value={formData.service}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300"
+                  className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300 ${isRTL ? 'text-right' : 'text-left'}`}
+                  dir={isRTL ? 'rtl' : 'ltr'}
                 >
-                  <option value="">Sélectionnez un service</option>
-                  <option value="recharge">Recharge de compte</option>
-                  <option value="depot">Dépôt d'argent</option>
-                  <option value="retrait">Retrait d'argent</option>
-                  <option value="autre">Autre</option>
+                  <option value="">{t('contact.selectService')}</option>
+                  <option value="recharge">{t('contact.recharge')}</option>
+                  <option value="depot">{t('contact.deposit')}</option>
+                  <option value="retrait">{t('contact.withdrawal')}</option>
+                  <option value="autre">{t('contact.other')}</option>
                 </select>
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message *
+                  {t('contact.message')} *
                 </label>
                 <textarea
                   id="message"
@@ -167,8 +173,9 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300"
-                  placeholder="Décrivez votre demande..."
+                  className={`w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300 ${isRTL ? 'text-right' : 'text-left'}`}
+                  placeholder={t('contact.messagePlaceholder')}
+                  dir={isRTL ? 'rtl' : 'ltr'}
                 />
               </div>
 
@@ -176,26 +183,26 @@ const Contact = () => {
                 type="submit"
                 className="w-full btn-primary"
               >
-                Envoyer le message
+                {t('contact.send')}
               </button>
             </form>
           </div>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className={`space-y-8 ${isRTL ? 'text-right' : 'text-left'}`}>
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Informations de contact
+                {t('contact.contactInfo')}
               </h3>
               <p className="text-gray-600 mb-8">
-                Notre équipe est disponible 24h/24 et 7j/7 pour vous accompagner dans vos transactions 1xbet.
+                {t('contact.contactDescription')}
               </p>
             </div>
 
             {/* Contact Methods */}
             <div className="space-y-6">
               {contactMethods.map((method, index) => (
-                <div key={index} className="flex items-center space-x-4">
+                <div key={index} className={`flex items-center ${isRTL ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
                   <div className={`${method.color} text-white w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0`}>
                     {method.icon}
                   </div>
@@ -209,31 +216,31 @@ const Contact = () => {
 
             {/* Additional Info */}
             <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-xl p-6 border border-primary-100">
-              <h4 className="font-semibold text-gray-900 mb-3">Informations importantes</h4>
+              <h4 className="font-semibold text-gray-900 mb-3">{t('contact.importantInfo')}</h4>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <svg className={`w-4 h-4 text-green-500 mt-0.5 flex-shrink-0 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Service disponible 24h/24
+                  <span>{t('contact.available24h')}</span>
                 </li>
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <svg className={`w-4 h-4 text-green-500 mt-0.5 flex-shrink-0 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Traitement en moins de 5 minutes
+                  <span>{t('contact.processing5min')}</span>
                 </li>
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <svg className={`w-4 h-4 text-green-500 mt-0.5 flex-shrink-0 ${isRTL ? 'ml-2' : 'ml-2'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Support multilingue
+                  <span>{t('contact.multilingualSupport')}</span>
                 </li>
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
+                  <svg className={`w-4 h-4 text-green-500 mt-0.5 flex-shrink-0 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Transactions sécurisées
+                  <span>{t('contact.secureTransactions')}</span>
                 </li>
               </ul>
             </div>

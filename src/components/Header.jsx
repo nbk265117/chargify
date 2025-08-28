@@ -16,12 +16,25 @@ const Header = () => {
     <header className="bg-white shadow-lg sticky top-0 w-full overflow-x-hidden" style={{ zIndex: '2147483646 !important' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full" style={{ maxWidth: '100vw' }}>
         <div className="flex justify-between items-center py-4">
-          {/* Language Selector and CTA - Left side (Desktop) */}
-          <div className={`hidden md:flex items-center ${isRTL ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
-            <LanguageSelector />
-            <a href="#contact" className="btn-primary">
-              {t('hero.cta')}
-            </a>
+          {/* Left side - Logo in LTR, Language Selector in RTL */}
+          <div className="flex items-center">
+            {!isRTL ? (
+              // Logo on the left for LTR languages
+              <div className="flex-shrink-0">
+                <h1 className="text-xl sm:text-2xl font-bold text-gradient">
+                  Chargify
+                </h1>
+                <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
+              </div>
+            ) : (
+              // Language Selector on the left for RTL languages
+              <div className="hidden md:flex items-center space-x-4">
+                <LanguageSelector />
+                <a href="#contact" className="btn-primary">
+                  {t('hero.cta')}
+                </a>
+              </div>
+            )}
           </div>
 
           {/* Desktop Navigation - Center */}
@@ -37,18 +50,29 @@ const Header = () => {
             </a>
           </nav>
 
-          {/* Logo - Right side */}
+          {/* Right side - Language Selector in LTR, Logo in RTL */}
           <div className="flex items-center">
-            <div className="flex-shrink-0 text-right">
-              <h1 className="text-xl sm:text-2xl font-bold text-gradient">
-                Chargify
-              </h1>
-              <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
-            </div>
+            {!isRTL ? (
+              // Language Selector on the right for LTR languages
+              <div className="hidden md:flex items-center space-x-4">
+                <LanguageSelector />
+                <a href="#contact" className="btn-primary">
+                  {t('hero.cta')}
+                </a>
+              </div>
+            ) : (
+              // Logo on the right for RTL languages
+              <div className="flex-shrink-0 text-right">
+                <h1 className="text-xl sm:text-2xl font-bold text-gradient">
+                  Chargify
+                </h1>
+                <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
+              </div>
+            )}
           </div>
 
           {/* Mobile menu button */}
-          <div className={`md:hidden flex items-center ${isRTL ? 'space-x-reverse space-x-2' : 'space-x-2'}`}>
+          <div className="md:hidden flex items-center space-x-2">
             <LanguageSelector />
             <button
               onClick={toggleMenu}
