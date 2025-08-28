@@ -55,18 +55,8 @@ const HowItWorks = () => {
 
         {/* Steps */}
         <div className="relative">
-          {/* Connection Line - Improved Design */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 transform -translate-y-1/2 z-0">
-            {/* Main gradient line */}
-            <div className="h-1 bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-400 rounded-full shadow-lg"></div>
-            {/* Animated dots */}
-            <div className="absolute top-0 left-1/3 w-3 h-3 bg-emerald-400 rounded-full animate-pulse shadow-lg transform -translate-x-1/2 -translate-y-1/2"></div>
-            <div className="absolute top-0 left-2/3 w-3 h-3 bg-purple-400 rounded-full animate-pulse shadow-lg transform -translate-x-1/2 -translate-y-1/2"></div>
-            {/* Glow effect */}
-            <div className="absolute inset-0 h-1 bg-gradient-to-r from-blue-400/20 via-emerald-400/20 to-purple-400/20 rounded-full blur-sm"></div>
-          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16">
             {steps.map((step, index) => (
               <div key={step.id} className="relative z-10">
                 {/* Mobile Arrow */}
