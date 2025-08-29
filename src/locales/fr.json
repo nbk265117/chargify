@@ -72,8 +72,7 @@
         "Paiement par ID",
         "Traitement rapide",
         "Support 24/7",
-        "Sécurisé",
-        "En savoir plus"
+        "Sécurisé"
       ]
     },
     "moneyDeposit": {
@@ -83,8 +82,7 @@
         "Méthodes multiples",
         "Confirmation rapide",
         "Historique détaillé",
-        "Frais réduits",
-        "En savoir plus"
+        "Frais réduits"
       ]
     },
     "moneyWithdrawal": {
@@ -94,8 +92,7 @@
         "Retrait rapide",
         "Vérification ID",
         "Support dédié",
-        "Sécurité maximale",
-        "En savoir plus"
+        "Sécurité maximale"
       ]
     }
   },

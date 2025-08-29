@@ -22,10 +22,10 @@
   line-height: 1.6;
 }
 
-/* Gestion des flexbox en RTL */
-.rtl .flex:not(.flex-col):not(.flex-col-reverse) {
+/* Gestion des flexbox en RTL - DÉSACTIVÉE */
+/* .rtl .flex:not(.flex-col):not(.flex-col-reverse) {
   flex-direction: row-reverse;
-}
+} */
 
 /* Espacement RTL */
 .rtl .space-x-2 > * + * {
@@ -106,11 +106,11 @@
 }
 
 .rtl .text-right {
-  text-align: left;
+  text-align: right;
 }
 
-/* Positionnement RTL */
-.rtl .left-0 {
+/* Positionnement RTL - DÉSACTIVÉ POUR HEADER */
+/* .rtl .left-0 {
   left: auto;
   right: 0;
 }
@@ -118,7 +118,7 @@
 .rtl .right-0 {
   right: auto;
   left: 0;
-}
+} */
 
 /* Bordures RTL */
 .rtl .border-l {
@@ -193,6 +193,25 @@
 .rtl .card h3 {
   font-family: 'Cairo', 'Tajawal', sans-serif;
   font-weight: 600;
+}
+
+/* Header RTL respectueux */
+.header-rtl-respectful {
+  direction: rtl;
+}
+
+.header-rtl-respectful .flex {
+  flex-direction: row-reverse;
+}
+
+/* Fix pour le dropdown du sélecteur de langues */
+.language-selector-dropdown {
+  transform: none !important;
+  transition: none !important;
+}
+
+.language-selector-container {
+  position: relative !important;
 }
 
 /* Footer en arabe */

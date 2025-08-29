@@ -63,22 +63,22 @@
 /* Responsive adjustments */
 @media (max-width: 640px) {
   .whatsapp-sticky-button {
-    padding: 1.25rem;
+    padding: 0;
   }
   
   .whatsapp-sticky-button svg {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 
 @media (min-width: 641px) {
   .whatsapp-sticky-button {
-    padding: 1.5rem;
+    padding: 0;
   }
   
   .whatsapp-sticky-button svg {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
   }
 }

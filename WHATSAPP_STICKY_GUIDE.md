@@ -30,7 +30,7 @@
 ## 🌐 **Support Multilingue**
 
 ### **Messages Pré-remplis**
-- **Arabe** : "مرحبا! أريد معلومات عن خدمات شارجفاي"
+- **Arabe** : "مرحبا! أريد معلومات عن خدمات شَرجِفاي"
 - **Français** : "Bonjour! Je voudrais des informations sur les services Chargify"
 - **Anglais** : "Hello! I would like information about Chargify services"
 
@@ -41,7 +41,7 @@
     "title": "واتساب / WhatsApp",
     "contactUs": "تواصل معنا عبر واتساب",
     "phoneNumber": "+212 777-298195",
-    "defaultMessage": "مرحبا! أريد معلومات عن خدمات شارجفاي"
+    "defaultMessage": "مرحبا! أريد معلومات عن خدمات شَرجِفاي"
   }
 }
 ```
@@ -84,7 +84,7 @@ function App() {
 
 ### **Format de l'URL**
 ```
-https://wa.me/212777298195?text=مرحبا!%20أريد%20معلومات%20عن%20خدمات%20شارجفاي
+https://wa.me/212777298195?text=مرحبا!%20أريد%20معلومات%20عن%20خدمات%20شَرجِفاي
 ```
 
 ### **Paramètres**

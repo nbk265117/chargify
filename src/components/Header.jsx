@@ -7,85 +7,164 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { t } = useTranslation()
   const { isRTL } = useRTL()
+  const { i18n } = useTranslation()
+
+  // Debug logging
+  console.log('Current language:', i18n.language)
+  console.log('Is RTL:', isRTL)
+  console.log('Language check result:', i18n.language === 'ar')
+
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 w-full overflow-x-hidden" style={{ zIndex: '2147483646 !important' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full" style={{ maxWidth: '100vw' }}>
+    <header className="bg-white shadow-lg sticky top-0 w-full overflow-x-hidden z-50 transition-all duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex justify-between items-center py-4">
-          {/* Left side - Logo in LTR, Language Selector in RTL */}
-          <div className="flex items-center">
-            {!isRTL ? (
-              // Logo on the left for LTR languages
-              <div className="flex-shrink-0">
-                <h1 className="text-xl sm:text-2xl font-bold text-gradient">
-                  {t('hero.title')}
-                </h1>
-                <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
-              </div>
+          {/* Mobile/Tablet Layout (md:hidden) - RTL RESPECTFUL */}
+          <div className={`md:hidden flex justify-between items-center w-full ${i18n.language === 'ar' ? 'flex-row-reverse' : ''}`}>
+            
+            {i18n.language === 'ar' ? (
+              // Arabic RTL Layout: Language Selector | Logo | Hamburger Menu
+              <>
+                {/* Left - Language Selector */}
+                <div className="flex items-center">
+                  <LanguageSelector />
+                </div>
+                
+                {/* Center - Logo */}
+                <div className="flex-shrink-0 text-center">
+                  <h1 className="text-xl sm:text-2xl font-bold text-gradient">
+                    {t('hero.title')}
+                  </h1>
+                  <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
+                </div>
+                
+                {/* Right - Hamburger Menu */}
+                <div className="flex items-center">
+                  <button
+                    onClick={toggleMenu}
+                    className="text-gray-700 hover:text-primary-600 focus:outline-none focus:text-primary-600 p-2"
+                  >
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      {isMenuOpen ? (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      ) : (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                      )}
+                    </svg>
+                  </button>
+                </div>
+              </>
             ) : (
-              // Language Selector on the left for RTL languages
-              <div className="hidden md:flex items-center space-x-4">
-                <LanguageSelector />
-                <a href="#contact" className="btn-primary">
-                  {t('hero.cta')}
-                </a>
-              </div>
+              // LTR Layout: Hamburger Menu | Logo | Language Selector
+              <>
+                {/* Left - Hamburger Menu */}
+                <div className="flex items-center">
+                  <button
+                    onClick={toggleMenu}
+                    className="text-gray-700 hover:text-primary-600 focus:outline-none focus:text-primary-600 p-2"
+                  >
+                    <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      {isMenuOpen ? (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      ) : (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                      )}
+                    </svg>
+                  </button>
+                </div>
+                
+                {/* Center - Logo */}
+                <div className="flex-shrink-0 text-center">
+                  <h1 className="text-xl sm:text-2xl font-bold text-gradient">
+                    {t('hero.title')}
+                  </h1>
+                  <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
+                </div>
+                
+                {/* Right - Language Selector */}
+                <div className="flex items-center">
+                  <LanguageSelector />
+                </div>
+              </>
             )}
           </div>
 
-          {/* Desktop Navigation - Center */}
-          <nav className={`hidden md:flex ${isRTL ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
-            <a href="#features" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
-              {t('nav.services')}
-            </a>
-            <a href="#how-it-works" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
-              {t('howItWorks.title')}
-            </a>
-            <a href="#contact" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
-              {t('nav.contact')}
-            </a>
-          </nav>
+          {/* Desktop Layout (hidden md:flex) - CUSTOM ARABIC ORDER */}
+          <div className="hidden md:flex justify-between items-center w-full">
+            {i18n.language !== 'ar' ? (
+              // LTR Layout (French/English)
+              <>
+                {/* Left side - Logo */}
+                <div className="flex items-center">
+                  <div className="flex-shrink-0">
+                    <h1 className="text-xl sm:text-2xl font-bold text-gradient">
+                      {t('hero.title')}
+                    </h1>
+                    <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
+                  </div>
+                </div>
 
-          {/* Right side - Language Selector in LTR, Logo in RTL */}
-          <div className="flex items-center">
-            {!isRTL ? (
-              // Language Selector on the right for LTR languages
-              <div className="hidden md:flex items-center space-x-4">
-                <LanguageSelector />
-                <a href="#contact" className="btn-primary">
-                  {t('hero.cta')}
-                </a>
-              </div>
+                {/* Center - Navigation */}
+                <nav className="flex space-x-8">
+                  <a href="#features" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
+                    {t('nav.services')}
+                  </a>
+                  <a href="#how-it-works" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
+                    {t('howItWorks.title')}
+                  </a>
+                  <a href="#contact" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
+                    {t('nav.contact')}
+                  </a>
+                </nav>
+
+                {/* Right side - Language Selector + Button */}
+                <div className="flex items-center space-x-4">
+                  <LanguageSelector />
+                  <a href="#contact" className="btn-primary">
+                    {t('hero.cta')}
+                  </a>
+                </div>
+              </>
             ) : (
-              // Logo on the right for RTL languages
-              <div className="flex-shrink-0 text-right">
-                <h1 className="text-xl sm:text-2xl font-bold text-gradient">
-                  {t('hero.title')}
-                </h1>
-                <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
-              </div>
-            )}
-          </div>
+              // Arabic Layout - Custom Order: Logo, Subtitle, Menu, Language Selector, Button
+              <>
+                {/* Left side - Logo + Subtitle */}
+                <div className="flex items-center">
+                  <div className="flex-shrink-0 text-start">
+                    <h1 className="text-xl sm:text-2xl font-bold text-gradient">
+                      {t('hero.title')}
+                    </h1>
+                    <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
+                  </div>
+                </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <LanguageSelector />
-            <button
-              onClick={toggleMenu}
-              className="text-gray-700 hover:text-primary-600 focus:outline-none focus:text-primary-600 p-2"
-            >
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
+                {/* Center - Navigation */}
+                <nav className="flex space-x-reverse space-x-8">
+                  <a href="#features" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
+                    {t('nav.services')}
+                  </a>
+                  <a href="#how-it-works" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
+                    {t('howItWorks.title')}
+                  </a>
+                  <a href="#contact" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
+                    {t('nav.contact')}
+                  </a>
+                </nav>
+
+                {/* Right side - Language Selector + Button */}
+                <div className="flex items-center space-x-4">
+                  <LanguageSelector />
+                  <a href="#contact" className="btn-primary">
+                    {t('hero.cta')}
+                  </a>
+                </div>
+              </>
+            )}
           </div>
         </div>
 

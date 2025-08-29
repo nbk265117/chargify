@@ -34,7 +34,7 @@ const WhatsAppStickyV2 = () => {
 
   return (
     <div 
-      className={`fixed bottom-6 sm:bottom-8 z-[9999] ${isRTL ? 'left-1/2 transform -translate-x-1/2' : 'right-6 sm:right-8'}`}
+      className="fixed bottom-6 sm:bottom-8 z-[9999] left-1/2 transform -translate-x-1/2 flex flex-col items-center"
     >
       {/* Contact Text */}
       <div className="text-center mb-2">
@@ -44,20 +44,20 @@ const WhatsAppStickyV2 = () => {
       </div>
 
       {/* WhatsApp Button Container */}
-      <div className="relative">
+      <div className="relative flex justify-center items-center w-12 h-12 sm:w-14 sm:h-14">
         {/* WhatsApp Button */}
         <a
           href={`https://wa.me/212777298195?text=${encodeURIComponent(t('whatsapp.defaultMessage'))}`}
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleWhatsAppClick}
-          className="whatsapp-sticky-button block bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 touch-manipulation"
+          className="whatsapp-sticky-button block bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 touch-manipulation w-full h-full flex items-center justify-center"
           aria-label={t('whatsapp.contactUs')}
           title={t('whatsapp.contactUs')}
         >
           {/* WhatsApp Icon */}
           <svg 
-            className="w-8 h-8 sm:w-10 sm:h-10" 
+            className="w-6 h-6 sm:w-7 sm:h-7" 
             fill="currentColor" 
             viewBox="0 0 24 24"
           >

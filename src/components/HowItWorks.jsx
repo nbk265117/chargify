@@ -70,16 +70,6 @@ const HowItWorks = () => {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-16">
             {steps.map((step, index) => (
               <div key={step.id} className="relative z-10">
-                {/* Mobile Arrow */}
-                {index < steps.length - 1 && (
-                  <div className="lg:hidden flex justify-center mb-6">
-                    <div className="w-8 h-8 bg-gradient-to-b from-gray-200 to-gray-300 rounded-full flex items-center justify-center shadow-md">
-                      <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                      </svg>
-                    </div>
-                  </div>
-                )}
                 
                 <div className="text-center">
                   {/* Step Number - Improved Design */}

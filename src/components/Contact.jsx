@@ -72,11 +72,11 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className={`mb-16 ${isRTL ? 'text-right' : 'text-center'}`}>
+        <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             {t('contact.title')}
           </h2>
-          <p className={`text-xl text-gray-600 max-w-3xl ${isRTL ? 'ml-auto' : 'mx-auto'}`}>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {t('contact.readyToStart')}
           </p>
         </div>

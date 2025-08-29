@@ -22,7 +22,7 @@ J'ai créé et intégré un bouton WhatsApp sticky qui redirige vers votre numé
 - **Ombre** : Effet de profondeur professionnel
 
 ### 🌐 **Support Multilingue**
-- **Arabe** : "مرحبا! أريد معلومات عن خدمات شارجفاي"
+- **Arabe** : "مرحبا! أريد معلومات عن خدمات شَرجِفاي"
 - **Français** : "Bonjour! Je voudrais des informations sur les services Chargify"
 - **Anglais** : "Hello! I would like information about Chargify services"
 
@@ -51,7 +51,7 @@ J'ai créé et intégré un bouton WhatsApp sticky qui redirige vers votre numé
 
 ### ✅ **URL WhatsApp Générée**
 ```
-https://wa.me/212777298195?text=مرحبا!%20أريد%20معلومات%20عن%20خدمات%20شارجفاي
+https://wa.me/212777298195?text=مرحبا!%20أريد%20معلومات%20عن%20خدمات%20شَرجِفاي
 ```
 
 ### ✅ **Support RTL**

@@ -47,10 +47,28 @@ const LanguageSelector = () => {
   const getDropdownPosition = () => {
     if (!buttonRef.current) return {};
     const rect = buttonRef.current.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const dropdownWidth = 192;
+    
+    let left = rect.left;
+    
+    // En RTL, aligner à droite du bouton
+    if (isRTL) {
+      left = rect.right - dropdownWidth;
+    }
+    
+    // Éviter que le dropdown sorte de l'écran
+    if (left + dropdownWidth > viewportWidth) {
+      left = viewportWidth - dropdownWidth - 16;
+    }
+    if (left < 16) {
+      left = 16;
+    }
+    
     return {
       top: rect.bottom + window.scrollY + 8,
-      left: isRTL ? rect.left - 192 + rect.width : rect.left,
-      width: 192
+      left: left,
+      width: dropdownWidth
     };
   };
 
@@ -82,7 +100,8 @@ const LanguageSelector = () => {
             top: getDropdownPosition().top,
             left: getDropdownPosition().left,
             width: getDropdownPosition().width,
-            minWidth: '192px'
+            minWidth: '192px',
+            maxWidth: '192px'
           }}
         >
           {languages.map((language) => (

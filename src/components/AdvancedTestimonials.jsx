@@ -263,7 +263,7 @@ const AdvancedTestimonials = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <FaHeart className="w-4 h-4" />
-                  <span className="text-sm font-medium">J'aime ce témoignage</span>
+                  <span className="text-sm font-medium">{t('testimonials.likeThisTestimonial')}</span>
                 </motion.button>
               </div>
             </motion.div>
@@ -289,12 +289,12 @@ const AdvancedTestimonials = () => {
           </motion.button>
 
           {/* Indicateurs */}
-          <div className="flex justify-center mt-8 space-x-3">
+          <div className="flex justify-center mt-8 gap-3">
             {testimonials.map((_, index) => (
               <motion.button
                 key={index}
                 onClick={() => goToTestimonial(index)}
-                className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentIndex 
                     ? 'bg-primary-500 scale-125' 
                     : 'bg-gray-300 hover:bg-gray-400'
@@ -317,7 +317,7 @@ const AdvancedTestimonials = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {isAutoPlaying ? '⏸️ Pause' : '▶️ Lecture'}
+              {isAutoPlaying ? `⏸️ ${t('testimonials.pause')}` : `▶️ ${t('testimonials.play')}`}
             </motion.button>
           </div>
         </div>

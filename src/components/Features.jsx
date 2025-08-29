@@ -66,11 +66,11 @@ const Features = () => {
           {serviceCards.map((card, index) => (
             <div 
               key={card.id} 
-              className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group"
+              className={`bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group ${isRTL ? 'text-right' : 'text-left'}`}
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Icon and Title */}
-              <div className={`flex items-center space-x-4 mb-6 ${isRTL ? 'flex-row-reverse space-x-reverse' : ''}`}>
+              <div className="flex items-center space-x-4 mb-6">
                 <div className={`w-16 h-16 ${card.bgColor} rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
                   <div className="text-white">
                     {card.icon}
@@ -89,25 +89,15 @@ const Features = () => {
               </p>
 
               {/* Features List */}
-              <div className="space-y-3">
+              <div className={`space-y-3 ${isRTL ? 'text-right' : 'text-left'}`}>
                 {t(card.featuresKey, { returnObjects: true }).slice(0, 4).map((feature, featureIndex) => (
-                  <div key={featureIndex} className={`flex items-center space-x-3 ${isRTL ? 'flex-row-reverse space-x-reverse' : ''}`}>
+                  <div key={featureIndex} className="flex items-center space-x-3">
                     <div className={`w-2 h-2 ${card.bgColor} rounded-full flex-shrink-0`}></div>
                     <span className={`text-sm font-medium text-gray-700 text-arabic ${isRTL ? 'text-right' : 'text-left'}`}>
                       {feature}
                     </span>
                   </div>
                 ))}
-              </div>
-
-              {/* Learn More Button */}
-              <div className={`mt-6 ${isRTL ? 'text-left' : 'text-right'}`}>
-                <button className={`inline-flex items-center space-x-2 ${card.textColor} hover:${card.textColor} font-semibold transition-colors duration-200 ${isRTL ? 'flex-row-reverse space-x-reverse' : ''}`}>
-                  <span className="text-arabic">{t(card.featuresKey, { returnObjects: true })[4]}</span>
-                  <svg className={`w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 ${isRTL ? 'rotate-180 group-hover:-translate-x-1' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
               </div>
             </div>
           ))}
