@@ -49,10 +49,10 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-gray-50 w-full overflow-x-hidden" style={{ maxWidth: '100vw' }}>
+    <section id="features" className="py-12 bg-gray-50 w-full overflow-x-hidden" style={{ maxWidth: '100vw' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full" style={{ maxWidth: '100vw' }}>
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 title-arabic">
             {t('features.whyChoose')}
           </h2>
@@ -62,7 +62,7 @@ const Features = () => {
         </div>
 
         {/* Service Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           {serviceCards.map((card, index) => (
             <div 
               key={card.id} 
@@ -104,7 +104,7 @@ const Features = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12 mb-16">
+        <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12 mb-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl lg:text-5xl font-bold text-primary-600 mb-2">10K+</div>

@@ -69,15 +69,15 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             {t('contact.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {t('contact.readyToStart')}
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -218,29 +218,29 @@ const Contact = () => {
             <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-xl p-6 border border-primary-100">
               <h4 className="font-semibold text-gray-900 mb-3">{t('contact.importantInfo')}</h4>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                  <svg className={`w-4 h-4 text-green-500 mt-0.5 flex-shrink-0 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>{t('contact.available24h')}</span>
+                  <span className={isRTL ? 'text-right' : 'text-left'}>{t('contact.available24h')}</span>
                 </li>
-                <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                  <svg className={`w-4 h-4 text-green-500 mt-0.5 flex-shrink-0 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>{t('contact.processing5min')}</span>
+                  <span className={isRTL ? 'text-right' : 'text-left'}>{t('contact.processing5min')}</span>
                 </li>
-                <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                  <svg className={`w-4 h-4 text-green-500 mt-0.5 flex-shrink-0 ${isRTL ? 'ml-2' : 'ml-2'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>{t('contact.multilingualSupport')}</span>
+                  <span className={isRTL ? 'text-right' : 'text-left'}>{t('contact.multilingualSupport')}</span>
                 </li>
-                <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                  <svg className={`w-4 h-4 text-green-500 mt-0.5 flex-shrink-0 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>{t('contact.secureTransactions')}</span>
+                  <span className={isRTL ? 'text-right' : 'text-left'}>{t('contact.secureTransactions')}</span>
                 </li>
               </ul>
             </div>

@@ -52,10 +52,10 @@ const HowItWorks = () => {
   ]
 
   return (
-    <section id="how-it-works" className="py-20 bg-white">
+    <section id="how-it-works" className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
             {t('howItWorks.title')}
           </h2>
@@ -66,11 +66,9 @@ const HowItWorks = () => {
 
         {/* Steps */}
         <div className="relative">
-
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             {steps.map((step, index) => (
               <div key={step.id} className="relative z-10">
-                
                 <div className="text-center">
                   {/* Step Number - Improved Design */}
                   <div className="inline-flex items-center justify-center w-20 h-20 bg-white border-4 border-gray-100 rounded-full mb-6 relative shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
@@ -98,7 +96,7 @@ const HowItWorks = () => {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 text-center">
+        <div className="mt-12 text-center">
           <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8 border border-primary-100">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               {t('howItWorks.readyToTry')}
