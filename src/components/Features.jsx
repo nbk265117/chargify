@@ -9,35 +9,20 @@ const Features = () => {
   const serviceCards = [
     {
       id: 1,
-      titleKey: 'services.accountRecharge.title',
-      descriptionKey: 'services.accountRecharge.description',
-      featuresKey: 'services.accountRecharge.features',
+      titleKey: 'services.deposit.title',
+      descriptionKey: 'services.deposit.description',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-        </svg>
-      ),
-      bgColor: 'bg-yellow-500',
-      textColor: 'text-yellow-600'
-    },
-    {
-      id: 2,
-      titleKey: 'services.moneyDeposit.title',
-      descriptionKey: 'services.moneyDeposit.description',
-      featuresKey: 'services.moneyDeposit.features',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
       bgColor: 'bg-green-500',
       textColor: 'text-green-600'
     },
     {
-      id: 3,
-      titleKey: 'services.moneyWithdrawal.title',
-      descriptionKey: 'services.moneyWithdrawal.description',
-      featuresKey: 'services.moneyWithdrawal.features',
+      id: 2,
+      titleKey: 'services.withdraw.title',
+      descriptionKey: 'services.withdraw.description',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -45,6 +30,18 @@ const Features = () => {
       ),
       bgColor: 'bg-purple-500',
       textColor: 'text-purple-600'
+    },
+    {
+      id: 3,
+      titleKey: 'services.support.title',
+      descriptionKey: 'services.support.description',
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
+        </svg>
+      ),
+      bgColor: 'bg-blue-500',
+      textColor: 'text-blue-600'
     }
   ];
 
@@ -87,18 +84,6 @@ const Features = () => {
               <p className={`text-gray-600 leading-relaxed mb-6 text-arabic ${isRTL ? 'text-right' : 'text-left'}`}>
                 {t(card.descriptionKey)}
               </p>
-
-              {/* Features List */}
-              <div className={`space-y-3 ${isRTL ? 'text-right' : 'text-left'}`}>
-                {t(card.featuresKey, { returnObjects: true }).slice(0, 4).map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-center space-x-3">
-                    <div className={`w-2 h-2 ${card.bgColor} rounded-full flex-shrink-0`}></div>
-                    <span className={`text-sm font-medium text-gray-700 text-arabic ${isRTL ? 'text-right' : 'text-left'}`}>
-                      {feature}
-                    </span>
-                  </div>
-                ))}
-              </div>
             </div>
           ))}
         </div>

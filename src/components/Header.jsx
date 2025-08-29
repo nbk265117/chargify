@@ -40,7 +40,7 @@ const Header = () => {
                   <h1 className="text-xl sm:text-2xl font-bold text-gradient">
                     {t('hero.title')}
                   </h1>
-                  <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
+                  <p className="text-xs text-gray-500 hidden sm:block">{t('hero.desc')}</p>
                 </div>
                 
                 {/* Right - Hamburger Menu */}
@@ -83,7 +83,7 @@ const Header = () => {
                   <h1 className="text-xl sm:text-2xl font-bold text-gradient">
                     {t('hero.title')}
                   </h1>
-                  <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
+                  <p className="text-xs text-gray-500 hidden sm:block">{t('hero.desc')}</p>
                 </div>
                 
                 {/* Right - Language Selector */}
@@ -105,7 +105,7 @@ const Header = () => {
                     <h1 className="text-xl sm:text-2xl font-bold text-gradient">
                       {t('hero.title')}
                     </h1>
-                    <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
+                    <p className="text-xs text-gray-500 hidden sm:block">{t('hero.desc')}</p>
                   </div>
                 </div>
 
@@ -139,7 +139,7 @@ const Header = () => {
                     <h1 className="text-xl sm:text-2xl font-bold text-gradient">
                       {t('hero.title')}
                     </h1>
-                    <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
+                    <p className="text-xs text-gray-500 hidden sm:block">{t('hero.desc')}</p>
                   </div>
                 </div>
 

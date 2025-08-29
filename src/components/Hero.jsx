@@ -60,32 +60,32 @@ const Hero = () => {
                     </svg>
                   </div>
                   <div className="flex-1 rtl:text-right ltr:text-left">
-                    <h3 className="text-base sm:text-lg font-semibold title-arabic rtl:text-right ltr:text-left">{t('services.recharge.title')}</h3>
-                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left">{t('services.recharge.description')}</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-3 sm:space-x-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div className="flex-1 rtl:text-right ltr:text-left">
                     <h3 className="text-base sm:text-lg font-semibold title-arabic rtl:text-right ltr:text-left">{t('services.deposit.title')}</h3>
                     <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left">{t('services.deposit.description')}</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-3 sm:space-x-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-400 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
                   <div className="flex-1 rtl:text-right ltr:text-left">
-                    <h3 className="text-base sm:text-lg font-semibold title-arabic rtl:text-right ltr:text-left">{t('features.support.title')}</h3>
-                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left">{t('features.support.description')}</p>
+                    <h3 className="text-base sm:text-lg font-semibold title-arabic rtl:text-right ltr:text-left">{t('services.withdraw.title')}</h3>
+                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left">{t('services.withdraw.description')}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-3 sm:space-x-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-400 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1 rtl:text-right ltr:text-left">
+                    <h3 className="text-base sm:text-lg font-semibold title-arabic rtl:text-right ltr:text-left">{t('services.support.title')}</h3>
+                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left">{t('services.support.description')}</p>
                   </div>
                 </div>
               </div>
