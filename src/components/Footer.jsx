@@ -20,7 +20,7 @@ const Footer = () => {
     ],
     support: [
       { name: t('footer.support'), href: "#" },
-      { name: "FAQ", href: "#" },
+      { name: t('faq.title'), href: "#faq" },
       { name: t('footer.terms'), href: "#" },
       { name: t('footer.privacy'), href: "#" }
     ]
@@ -64,9 +64,9 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-gradient">
-                Chargify
+                {t('brand.name')}
               </h3>
-              <p className="text-sm text-gray-400">Partenaire Officiel 1xbet</p>
+              <p className="text-sm text-gray-400">{t('meta.title')}</p>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               {t('footer.description')}
@@ -153,19 +153,19 @@ const Footer = () => {
                 <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span>Service 24/7</span>
+                <span>{t('footer.service24h')}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span>Sécurisé</span>
+                <span>{t('footer.secure')}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <svg className="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                <span>Rapide</span>
+                <span>{t('footer.fast')}</span>
               </div>
             </div>
           </div>

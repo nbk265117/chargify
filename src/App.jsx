@@ -3,6 +3,8 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Features from './components/Features'
 import HowItWorks from './components/HowItWorks'
+import Promo from './components/Promo'
+import FAQ from './components/FAQ'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -18,6 +20,8 @@ function App() {
         <Hero />
         <Features />
         <HowItWorks />
+        <Promo />
+        <FAQ />
         <Testimonials />
         <Contact />
         <Footer />

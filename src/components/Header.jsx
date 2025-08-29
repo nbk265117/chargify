@@ -22,7 +22,7 @@ const Header = () => {
               // Logo on the left for LTR languages
               <div className="flex-shrink-0">
                 <h1 className="text-xl sm:text-2xl font-bold text-gradient">
-                  Chargify
+                  {t('hero.title')}
                 </h1>
                 <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
               </div>
@@ -64,7 +64,7 @@ const Header = () => {
               // Logo on the right for RTL languages
               <div className="flex-shrink-0 text-right">
                 <h1 className="text-xl sm:text-2xl font-bold text-gradient">
-                  Chargify
+                  {t('hero.title')}
                 </h1>
                 <p className="text-xs text-gray-500 hidden sm:block">{t('hero.subtitle')}</p>
               </div>

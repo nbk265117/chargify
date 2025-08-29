@@ -1,4 +1,7 @@
 {
+  "brand": {
+    "name": "Chargify"
+  },
   "meta": {
     "title": "Chargify - Official 1xbet Partner",
     "description": "The complete solution for your 1xbet transactions. Recharge your account, make deposits and withdrawals securely.",
@@ -18,7 +21,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Official Partner",
+    "title": "Chargify",
     "subtitle": "Recharge, Deposit, Withdrawal",
     "description": "The complete solution for your 1xbet transactions. Recharge your account, make deposits and withdrawals securely.",
     "cta": "Get Started",
@@ -35,7 +38,7 @@
     },
     "speed": {
       "title": "Speed",
-      "description": "Instant transactions, no waiting"
+      "description": "Recharge and withdrawal in 5min only"
     },
     "support": {
       "title": "24/7 Support",
@@ -44,7 +47,8 @@
     "fees": {
       "title": "Reduced Fees",
       "description": "Competitive and transparent rates"
-    }
+    },
+    "speedValue": "5min"
   },
   "services": {
     "subtitle": "Complete solutions for your needs",
@@ -97,20 +101,24 @@
   },
   "howItWorks": {
     "title": "How it works?",
-    "subtitle": "Simple process in 3 steps",
+    "subtitle": "Simple process in 4 steps",
     "detailedProcess": "Detailed Process",
     "readyToTry": "Ready to Try?",
     "step1": {
-      "title": "Registration",
-      "description": "Create your account in minutes"
+      "title": "Contact us",
+      "description": "Contact us via WhatsApp or phone"
     },
     "step2": {
-      "title": "Verification",
-      "description": "Verify your identity quickly"
+      "title": "Agree on payment",
+      "description": "Agree on payment method (bank transfer / cash…)"
     },
     "step3": {
-      "title": "Transaction",
-      "description": "Make your transactions securely"
+      "title": "Send your ID",
+      "description": "Send us your ID"
+    },
+    "step4": {
+      "title": "Receive service",
+      "description": "Receive recharge or withdrawal directly"
     }
   },
   "testimonials": {
@@ -151,13 +159,57 @@
   },
   "footer": {
     "description": "Your trusted partner for all your 1xbet transactions",
+    "services": "Services",
     "quickLinks": "Quick Links",
     "support": "Support",
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Use",
     "howItWorks": "How it works",
-    "copyright": "© 2024 Chargify. All rights reserved."
+    "copyright": "© 2024 Chargify. All rights reserved.",
+    "service24h": "24/7 Service",
+    "secure": "Secure",
+    "fast": "Fast"
+  },
+  "promo": {
+    "title": "Chargify Promo",
+    "subtitle": "Special offer 👇",
+    "welcomeCode": "Get your welcome code:",
+    "code": "FLY255 🏷️",
+    "description": "First recharge up to 2000 dirhams",
+    "features": [
+      "⚡ Guaranteed speed: Recharge and withdrawal in 5min only",
+      "🏦 All Moroccan banks supported",
+      "📞 Direct support via WhatsApp 24/7",
+      "🏠 Home delivery service",
+      "🔒 Trust and security 100%"
+    ]
+  },
+  "faq": {
+    "title": "How to benefit?",
+    "subtitle": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "What do I need to recharge?",
+        "answer": "Just your ID + payment."
+      },
+      {
+        "question": "How do I receive my money?",
+        "answer": "Via bank or cash at home."
+      },
+      {
+        "question": "Is there support at night?",
+        "answer": "Yes, 24/7."
+      }
+    ]
+  },
+  "stats": {
+    "satisfiedClients": "Satisfied Clients",
+    "transactions": "Transactions",
+    "averageTime": "Average Time",
+    "successRate": "Success Rate",
+    "averageRating": "Average Rating",
+    "availableSupport": "Available Support"
   },
   "common": {
     "loading": "Loading...",

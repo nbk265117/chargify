@@ -12,8 +12,7 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight title-arabic">
-                {t('hero.title')}{' '}
-                <span className="text-yellow-400">1xbet</span>
+                {t('hero.title')}
               </h1>
               <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 subtitle-arabic">
                 {t('hero.subtitle')}
@@ -40,7 +39,7 @@ const Hero = () => {
                 <div className="text-xs sm:text-sm text-blue-200 text-arabic">{t('features.support.title')}</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-yellow-400">5min</div>
+                <div className="text-2xl sm:text-3xl font-bold text-yellow-400">{t('features.speedValue')}</div>
                 <div className="text-xs sm:text-sm text-blue-200 text-arabic">{t('features.speed.title')}</div>
               </div>
               <div className="text-center">

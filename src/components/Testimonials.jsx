@@ -138,22 +138,22 @@ const Testimonials = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl lg:text-5xl font-bold text-primary-600 mb-2">4.9/5</div>
-              <div className="text-gray-600">Note Moyenne</div>
+              <div className="text-gray-600">{t('stats.averageRating')}</div>
               <div className="flex justify-center mt-2">
                 {renderStars(5)}
               </div>
             </div>
             <div className="text-center">
               <div className="text-4xl lg:text-5xl font-bold text-primary-600 mb-2">98%</div>
-              <div className="text-gray-600">Clients Satisfaits</div>
+              <div className="text-gray-600">{t('stats.satisfiedClients')}</div>
             </div>
             <div className="text-center">
               <div className="text-4xl lg:text-5xl font-bold text-primary-600 mb-2">24/7</div>
-              <div className="text-gray-600">Support Disponible</div>
+              <div className="text-gray-600">{t('stats.availableSupport')}</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl lg:text-5xl font-bold text-primary-600 mb-2">5min</div>
-              <div className="text-gray-600">Temps Moyen</div>
+              <div className="text-4xl lg:text-5xl font-bold text-primary-600 mb-2">{t('features.speedValue')}</div>
+              <div className="text-gray-600">{t('stats.averageTime')}</div>
             </div>
           </div>
         </div>
