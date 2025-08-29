@@ -2,9 +2,10 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 const Testimonials = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
-  const testimonials = [
+  // Utiliser les témoignages traduits si disponibles, sinon utiliser les témoignages par défaut
+  const testimonials = t('testimonials.items', { returnObjects: true }) || [
     {
       id: 1,
       name: "Ahmed M.",
@@ -12,7 +13,8 @@ const Testimonials = () => {
       rating: 5,
       comment: "Service exceptionnel ! Ma recharge a été traitée en moins de 3 minutes. L'équipe est très professionnelle et réactive. Je recommande vivement !",
       avatar: "AM",
-      service: "Recharge"
+      service: "Recharge",
+      photo: "/testimonials/ahmed-mazouri.jpg"
     },
     {
       id: 2,
@@ -21,7 +23,8 @@ const Testimonials = () => {
       rating: 5,
       comment: "J'utilise Chargify depuis 6 mois maintenant. Jamais eu de problème. Les retraits sont rapides et le support client est excellent.",
       avatar: "FK",
-      service: "Retrait"
+      service: "Retrait",
+      photo: "/testimonials/fatima-karawi.jpg"
     },
     {
       id: 3,
@@ -30,7 +33,8 @@ const Testimonials = () => {
       rating: 5,
       comment: "Partenaire 1xbet de confiance. Transactions sécurisées et frais réduits. Je suis très satisfait du service.",
       avatar: "YB",
-      service: "Dépôt"
+      service: "Dépôt",
+      photo: "/testimonials/youssef-bakkali.jpg"
     },
     {
       id: 4,
@@ -39,7 +43,8 @@ const Testimonials = () => {
       rating: 5,
       comment: "Support 24/7 vraiment efficace. J'ai eu une question tard dans la nuit et j'ai reçu une réponse immédiate. Très professionnel !",
       avatar: "AS",
-      service: "Support"
+      service: "Support",
+      photo: "/testimonials/amina-saadi.jpg"
     },
     {
       id: 5,
@@ -48,7 +53,8 @@ const Testimonials = () => {
       rating: 5,
       comment: "Service rapide et fiable. J'ai fait plusieurs transactions et tout s'est toujours bien passé. Je recommande !",
       avatar: "KL",
-      service: "Recharge"
+      service: "Recharge",
+      photo: "/testimonials/karim-louzi.jpg"
     },
     {
       id: 6,
@@ -57,7 +63,8 @@ const Testimonials = () => {
       rating: 5,
       comment: "Excellente expérience avec Chargify. Le processus est simple et les confirmations sont rapides. Service de qualité !",
       avatar: "NR",
-      service: "Retrait"
+      service: "Retrait",
+      photo: "/testimonials/nadia-ramdani.jpg"
     }
   ]
 
@@ -72,6 +79,10 @@ const Testimonials = () => {
         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
       </svg>
     ))
+  }
+
+  const getInitials = (name) => {
+    return name.split(' ').map(n => n[0]).join('').toUpperCase();
   }
 
   return (
@@ -98,8 +109,27 @@ const Testimonials = () => {
               {/* Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                    {testimonial.avatar}
+                  <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-gradient-to-br from-primary-500 to-primary-700">
+                    {testimonial.photo ? (
+                      <img 
+                        src={testimonial.photo} 
+                        alt={testimonial.name}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          // Fallback vers les initiales si l'image ne charge pas
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'flex';
+                        }}
+                      />
+                    ) : null}
+                    <div 
+                      className={`w-full h-full flex items-center justify-center text-white font-bold text-sm ${
+                        testimonial.photo ? 'hidden' : 'flex'
+                      }`}
+                      style={{ display: testimonial.photo ? 'none' : 'flex' }}
+                    >
+                      {testimonial.avatar || getInitials(testimonial.name)}
+                    </div>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>

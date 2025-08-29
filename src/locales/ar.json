@@ -122,10 +122,66 @@
     }
   },
   "testimonials": {
-    "title": "ماذا يقول عملاؤنا",
+    "title": "شنو كيقولو عملائنا",
     "subtitle": "شهادات الثقة",
-    "whatOurClientsSay": "ماذا يقول عملاؤنا",
-    "joinSatisfiedClients": "انضم إلى عملائنا الراضين"
+    "whatOurClientsSay": "شنو كيقولو عملائنا",
+    "joinSatisfiedClients": "انضم لعملائنا الراضين",
+    "items": [
+      {
+        "id": 1,
+        "name": "أحمد م.",
+        "location": "الدار البيضاء",
+        "rating": 5,
+        "comment": "والله خدمة ممتازة! الشحن ديالي تم ف 3 دقايق بالضبط. الفريق محترم وردو عليا بسرعة. أنصح بيهم بزاف!",
+        "service": "شحن الحساب",
+        "photo": "/testimonials/ahmed-mazouri.jpg"
+      },
+      {
+        "id": 2,
+        "name": "فاطمة ك.",
+        "location": "الرباط",
+        "rating": 5,
+        "comment": "كنستعمل شارجفاي من 6 شهور. ما جانيش أي مشكل. السحب سريع والدعم ممتاز. راضية بزاف!",
+        "service": "سحب الأموال",
+        "photo": "/testimonials/fatima-karawi.jpg"
+      },
+      {
+        "id": 3,
+        "name": "يوسف ب.",
+        "location": "فاس",
+        "rating": 5,
+        "comment": "شريك 1xbet موثوق. المعاملات آمنة والرسوم قليلة. راضي بزاف بالخدمة ديالهم.",
+        "service": "إيداع الأموال",
+        "photo": "/testimonials/youssef-bakkali.jpg"
+      },
+      {
+        "id": 4,
+        "name": "أمينة س.",
+        "location": "مراكش",
+        "rating": 5,
+        "comment": "الدعم 24/7 فعال بزاف. كان عندي سؤال ف الليل وردو عليا ف الحال. محترفين بزاف!",
+        "service": "الدعم",
+        "photo": "/testimonials/amina-saadi.jpg"
+      },
+      {
+        "id": 5,
+        "name": "كريم ل.",
+        "location": "طنجة",
+        "rating": 5,
+        "comment": "خدمة سريعة وموثوقة. درت بزاف من المعاملات وكلشي ماشي مزيان. أنصح بيهم!",
+        "service": "شحن الحساب",
+        "photo": "/testimonials/karim-louzi.jpg"
+      },
+      {
+        "id": 6,
+        "name": "نادية ر.",
+        "location": "أكادير",
+        "rating": 5,
+        "comment": "تجربة ممتازة مع شارجفاي. العملية بسيطة والتأكيدات سريعة. خدمة ديال الجودة!",
+        "service": "سحب الأموال",
+        "photo": "/testimonials/nadia-ramdani.jpg"
+      }
+    ]
   },
   "contact": {
     "title": "تواصل معنا دابا",
