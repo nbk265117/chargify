@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "avatars": "node scripts/download-avatars.js",
     "generate-avatars": "node scripts/generate-testimonial-avatars.js",
-    "check-images": "node scripts/check-images.js"
+    "check-images": "node scripts/check-images.js",
+    "cleanup-whatsapp": "node scripts/cleanup-whatsapp-test.js"
   },
   "repository": {
     "type": "git",

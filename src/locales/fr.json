@@ -232,5 +232,11 @@
     "upload": "Téléverser",
     "print": "Imprimer",
     "share": "Partager"
+  },
+  "whatsapp": {
+    "title": "WhatsApp",
+    "contactUs": "Contactez-nous sur WhatsApp",
+    "phoneNumber": "+212 777-298195",
+    "defaultMessage": "Bonjour! Je voudrais des informations sur les services Chargify"
   }
 }

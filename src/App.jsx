@@ -12,6 +12,8 @@ import Footer from './components/Footer'
 import Promo from './components/Promo'
 import FAQ from './components/FAQ'
 import SEO from './components/SEO'
+import WhatsAppSticky from './components/WhatsAppSticky'
+
 import './index.css'
 
 function App() {
@@ -31,6 +33,8 @@ function App() {
             <Contact />
           </main>
           <Footer />
+          <WhatsAppSticky />
+          
         </div>
       </Router>
     </HelmetProvider>
