@@ -1,15 +1,34 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
 import LogoText from './LogoText'
 
 const Certification = () => {
   const { t } = useTranslation()
 
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-white">
+    <motion.section 
+      className="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-white"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 animate-fade-in">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h2 
+            className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <LogoText>شَرجِفاي</LogoText> وكالة موثوقة لدى{' '}
             <img
               src="/logo/1xbet.webp"
@@ -21,9 +40,15 @@ const Certification = () => {
                 verticalAlign: 'middle'
               }}
             />
-          </h2>
-          <div className="w-24 h-1 bg-primary-600 mx-auto rounded-full animate-slide-in"></div>
-        </div>
+          </motion.h2>
+          <motion.div 
+            className="w-24 h-1 bg-primary-600 mx-auto rounded-full"
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          ></motion.div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Certification Image */}
@@ -118,7 +143,7 @@ const Certification = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

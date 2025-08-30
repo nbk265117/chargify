@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
 import LogoText from './LogoText'
 
 const Hero = () => {
@@ -18,49 +19,115 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full" style={{ maxWidth: '100vw' }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="space-y-8 animate-fade-in">
-            <div className="space-y-4">
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight title-arabic">
+          <motion.div 
+            className="space-y-8"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <motion.div 
+              className="space-y-4"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <motion.h1 
+                className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight title-arabic"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
                 <LogoText>{t('hero.title')}</LogoText>
-              </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 subtitle-arabic">
+              </motion.h1>
+              <motion.p 
+                className="text-lg sm:text-xl lg:text-2xl text-blue-100 subtitle-arabic"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+              >
                 <LogoText>{t('hero.subtitle')}</LogoText>
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
             
-            <p className="text-base sm:text-lg text-blue-200 leading-relaxed text-arabic">
+            <motion.p 
+              className="text-base sm:text-lg text-blue-200 leading-relaxed text-arabic"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+            >
               <LogoText>{t('hero.description')}</LogoText>
-            </p>
+            </motion.p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a href="#contact" className="bg-white text-primary-600 hover:bg-gray-100 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-center btn-arabic text-sm sm:text-base">
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+            >
+              <motion.a 
+                href="#contact" 
+                className="bg-white text-primary-600 hover:bg-gray-100 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-center btn-arabic text-sm sm:text-base"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 {t('hero.cta')}
-              </a>
-              <a href="#features" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-300 text-center btn-arabic text-sm sm:text-base">
+              </motion.a>
+              <motion.a 
+                href="#features" 
+                className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all duration-300 text-center btn-arabic text-sm sm:text-base"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 {t('nav.services')}
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-6 pt-6 sm:pt-8">
-              <div className="text-center">
+            <motion.div 
+              className="grid grid-cols-3 gap-3 sm:gap-6 pt-6 sm:pt-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.4 }}
+            >
+              <motion.div 
+                className="text-center"
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <div className="text-2xl sm:text-3xl font-bold text-yellow-400">24/7</div>
                 <div className="text-xs sm:text-sm text-blue-200 text-arabic">{t('features.support.title')}</div>
-              </div>
-              <div className="text-center">
+              </motion.div>
+              <motion.div 
+                className="text-center"
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <div className="text-2xl sm:text-3xl font-bold text-yellow-400">{t('features.speedValue')}</div>
                 <div className="text-xs sm:text-sm text-blue-200 text-arabic">{t('features.speed.title')}</div>
-              </div>
-              <div className="text-center">
+              </motion.div>
+              <motion.div 
+                className="text-center"
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <div className="text-2xl sm:text-3xl font-bold text-yellow-400">100%</div>
                 <div className="text-xs sm:text-sm text-blue-200 text-arabic">{t('features.security.title')}</div>
-              </div>
-            </div>
-          </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
 
           {/* Visual */}
-          <div className="relative animate-slide-up">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20">
+          <motion.div 
+            className="relative"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <motion.div 
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 lg:p-8 border border-white/20"
+              whileHover={{ scale: 1.02, y: -5 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex items-center space-x-3 sm:space-x-4">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-400 rounded-full flex items-center justify-center flex-shrink-0">
@@ -98,12 +165,20 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full opacity-20 animate-bounce-slow"></div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-green-400 rounded-full opacity-20 animate-bounce-slow animation-delay-200"></div>
-          </div>
+            <motion.div 
+              className="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full opacity-20"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            ></motion.div>
+            <motion.div 
+              className="absolute -bottom-4 -left-4 w-16 h-16 bg-green-400 rounded-full opacity-20"
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            ></motion.div>
+          </motion.div>
         </div>
       </div>
       </div>

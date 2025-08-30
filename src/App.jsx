@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import { ToastContainer } from 'react-toastify'
+import { AnimatePresence } from 'framer-motion'
 import 'react-toastify/dist/ReactToastify.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
@@ -28,17 +29,19 @@ function App() {
         <div className="App">
           <SEO />
           <Header />
-          <main>
-            <Hero />
-            <Features />
-            <Certification />
-            <Banks />
-            <HowItWorks />
-            <AdvancedTestimonials />
-            <Promo />
-            <FAQ />
-            <Contact />
-          </main>
+          <AnimatePresence mode="wait">
+            <main>
+              <Hero />
+              <Features />
+              <Certification />
+              <Banks />
+              <HowItWorks />
+              <AdvancedTestimonials />
+              <Promo />
+              <FAQ />
+              <Contact />
+            </main>
+          </AnimatePresence>
           <Footer />
           <WhatsAppSticky />
           <PromoSticky />

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useRTL } from '../hooks/useRTL'
 import { toast } from 'react-toastify'
+import { motion } from 'framer-motion'
 import LogoText from './LogoText'
 
 const Contact = () => {
@@ -142,17 +143,42 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+    <motion.section 
+      id="contact" 
+      className="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h2 
+            className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             {t('contact.title')}
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             <LogoText>{t('contact.subtitle')}</LogoText>
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 ${isRTL ? 'lg:grid-cols-2-reverse' : ''}`}>
           {/* Contact Form */}
@@ -336,7 +362,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

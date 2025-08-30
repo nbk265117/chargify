@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { useRTL } from '../hooks/useRTL'
+import { motion } from 'framer-motion'
 import LogoText from './LogoText'
 
 const Features = () => {
@@ -50,22 +51,62 @@ const Features = () => {
     <section id="features" className="py-12 bg-gray-50 w-full overflow-x-hidden" style={{ maxWidth: '100vw' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full" style={{ maxWidth: '100vw' }}>
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 title-arabic">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h2 
+            className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 title-arabic"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <LogoText>{t('features.whyChoose')}</LogoText>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto text-arabic">
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-gray-600 max-w-3xl mx-auto text-arabic"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             <LogoText>{t('features.subtitle')}</LogoText>
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Service Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <motion.div 
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.2
+              }
+            }
+          }}
+        >
           {serviceCards.map((card, index) => (
-            <div 
+            <motion.div 
               key={card.id} 
               className={`bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group ${isRTL ? 'text-right' : 'text-left'}`}
-              style={{ animationDelay: `${index * 200}ms` }}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 }
+              }}
+              whileHover={{ 
+                scale: 1.05, 
+                y: -10,
+                transition: { type: "spring", stiffness: 300 }
+              }}
             >
               {/* Icon and Title */}
               <div className="flex items-center space-x-4 mb-6">
@@ -85,9 +126,9 @@ const Features = () => {
               <p className={`text-gray-600 leading-relaxed mb-6 text-arabic ${isRTL ? 'text-right' : 'text-left'}`}>
                 <LogoText>{t(card.descriptionKey)}</LogoText>
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Stats Section */}
         <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12 mb-12">
