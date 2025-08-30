@@ -18,7 +18,7 @@ J'ai créé pour vous une section témoignages **complète et professionnelle** 
    - Service : سحب الأموال
 
 3. **يوسف البقالي** (Youssef Bakkali) - فاس
-   - *"شريك 1xbet موثوق. المعاملات آمنة والرسوم قليلة..."*
+   - *"وكيل 1xbet موثوق. المعاملات آمنة والرسوم قليلة..."*
    - Service : إيداع الأموال
 
 4. **أمينة السعدي** (Amina Saadi) - مراكش

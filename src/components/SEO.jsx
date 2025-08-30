@@ -16,11 +16,11 @@ const SEO = ({
   // Utiliser les métadonnées par défaut de la langue actuelle
   const defaultMeta = t('meta', { returnObjects: true });
   
-  const seoTitle = title || defaultMeta?.title || 'Chargify';
-  const seoDescription = description || defaultMeta?.description || '';
-  const seoKeywords = keywords || defaultMeta?.keywords || '';
-  const seoImage = image || defaultMeta?.ogImage || '/og-image.jpg';
-  const seoAuthor = author || defaultMeta?.author || 'Chargify';
+  const seoTitle = title || t('meta.title') || 'Chargify';
+  const seoDescription = description || t('meta.description') || '';
+  const seoKeywords = keywords || t('meta.keywords') || '';
+  const seoImage = image || t('meta.ogImage') || '/og-image.jpg';
+  const seoAuthor = author || t('meta.author') || 'Chargify';
   const seoUrl = url || window.location.href;
   
   // Déterminer la direction du texte basée sur la langue
@@ -40,8 +40,8 @@ const SEO = ({
       <html lang={htmlLang} dir={htmlDir} />
       
       {/* Open Graph */}
-      <meta property="og:title" content={defaultMeta?.ogTitle || seoTitle} />
-      <meta property="og:description" content={defaultMeta?.ogDescription || seoDescription} />
+      <meta property="og:title" content={t('meta.ogTitle') || seoTitle} />
+      <meta property="og:description" content={t('meta.ogDescription') || seoDescription} />
       <meta property="og:image" content={seoImage} />
       <meta property="og:url" content={seoUrl} />
       <meta property="og:type" content={type} />
@@ -49,9 +49,9 @@ const SEO = ({
       <meta property="og:locale:alternate" content={htmlLang === 'ar' ? 'en' : 'ar'} />
       
       {/* Twitter Card */}
-      <meta name="twitter:card" content={defaultMeta?.twitterCard || "summary_large_image"} />
-      <meta name="twitter:title" content={defaultMeta?.twitterTitle || seoTitle} />
-      <meta name="twitter:description" content={defaultMeta?.twitterDescription || seoDescription} />
+      <meta name="twitter:card" content={t('meta.twitterCard') || "summary_large_image"} />
+      <meta name="twitter:title" content={t('meta.twitterTitle') || seoTitle} />
+      <meta name="twitter:description" content={t('meta.twitterDescription') || seoDescription} />
       <meta name="twitter:image" content={seoImage} />
       
       {/* Métadonnées supplémentaires */}

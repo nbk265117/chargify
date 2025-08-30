@@ -29,9 +29,9 @@ const LanguageSelector = () => {
   }, [i18n.language]);
 
   const languages = [
+    { code: 'ar', name: 'الدارجة', flag: '🇲🇦' },
     { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'ar', name: 'العربية', flag: '🇲🇦' }
+    { code: 'en', name: 'English', flag: '🇺🇸' }
   ];
 
   const changeLanguage = (lng) => {

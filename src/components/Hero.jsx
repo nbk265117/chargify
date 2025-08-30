@@ -72,8 +72,8 @@ const Hero = () => {
                     </svg>
                   </div>
                   <div className="flex-1 rtl:text-right ltr:text-left">
-                    <h3 className="text-base sm:text-lg font-semibold title-arabic rtl:text-right ltr:text-left">{t('services.withdraw.title')}</h3>
-                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left">{t('services.withdraw.description')}</p>
+                    <h3 className="text-base sm:text-lg font-semibold title-arabic rtl:text-right ltr:text-left">{t('services.withdrawal.title')}</h3>
+                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left">{t('services.withdrawal.description')}</p>
                   </div>
                 </div>
 

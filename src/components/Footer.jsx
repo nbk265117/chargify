@@ -7,10 +7,9 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { name: t('services.recharge.title'), href: "#features" },
       { name: t('services.deposit.title'), href: "#features" },
       { name: t('services.withdrawal.title'), href: "#features" },
-      { name: t('features.support.title'), href: "#contact" }
+      { name: t('services.support.title'), href: "#contact" }
     ],
     company: [
       { name: t('nav.about'), href: "#" },

@@ -25,14 +25,14 @@ i18n
   .init({
     resources,
     fallbackLng: 'ar',
-    debug: true,
+    debug: false,
 
     interpolation: {
       escapeValue: false, // React already does escaping
     },
 
     detection: {
-      order: ['localStorage', 'htmlTag'],
+      order: ['localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
       lookupLocalStorage: 'i18nextLng',
     },
@@ -66,14 +66,18 @@ const initializeRTL = () => {
 };
 
 // Forcer l'arabe comme langue par défaut
-if (!localStorage.getItem('i18nextLng')) {
-  localStorage.setItem('i18nextLng', 'ar');
-}
+localStorage.setItem('i18nextLng', 'ar');
+
+// Forcer l'arabe comme langue actuelle
+i18n.changeLanguage('ar');
 
 // Initialiser RTL au démarrage
 initializeRTL();
 
 // Écouter les changements de langue
 i18n.on('languageChanged', initializeRTL);
+
+// Debug: Log the current language
+console.log('i18n initialized with language:', i18n.language);
 
 export default i18n;
