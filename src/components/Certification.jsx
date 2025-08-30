@@ -83,15 +83,15 @@ const Certification = () => {
                   محتاج شي مساعدة؟ حنا خدامين 7/24:
                 </h4>
                                  <div 
-                   className="flex items-center space-x-3 rtl:space-x-reverse bg-white rounded-lg p-3 shadow-sm cursor-pointer hover:bg-green-50 transition-colors duration-300"
+                   className="whatsapp-number cursor-pointer"
                    onClick={() => {
                      const message = "مرحبا! أريد معلومات عن خدمات شَرجِفاي"
                      const whatsappUrl = `https://wa.me/212777298195?text=${encodeURIComponent(message)}`
                      window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
                    }}
                  >
-                   <span className="text-green-600 text-xl">📲</span>
-                   <span className="text-gray-700 font-medium">واتساب: 07.77.29.81.95</span>
+                   <span className="whatsapp-icon">📲</span>
+                   <span>واتساب: 07.77.29.81.95</span>
                  </div>
               </div>
 

@@ -280,7 +280,7 @@ const Contact = () => {
               {contactMethods.map((method, index) => (
                 <div 
                   key={index} 
-                  className={`flex items-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 ${method.isClickable ? 'cursor-pointer hover:bg-gray-50' : ''}`}
+                  className={`flex items-center p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 ${method.isClickable ? 'cursor-pointer hover:bg-gray-50' : ''} ${method.name === "WhatsApp" ? 'whatsapp-card' : ''}`}
                   onClick={method.isClickable ? () => {
                     if (method.phoneNumber) {
                       handleWhatsAppClick(method.phoneNumber)
@@ -291,12 +291,12 @@ const Contact = () => {
                     }
                   } : undefined}
                 >
-                  <div className={`${method.color} text-white w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg mr-4`}>
+                  <div className={`${method.color} text-white w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg mr-4 ${method.name === "WhatsApp" ? 'whatsapp-icon-container' : ''}`}>
                     {method.icon}
                   </div>
                   <div className="text-left flex-1">
                     <h4 className="font-bold text-gray-900 text-lg mb-1 text-left">{method.name}</h4>
-                    <p className="text-gray-600 font-medium text-left">{method.value}</p>
+                    <p className={`font-medium text-left ${method.name === "WhatsApp" ? 'whatsapp-number-text' : 'text-gray-600'}`}>{method.value}</p>
                   </div>
                 </div>
               ))}
