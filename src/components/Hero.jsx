@@ -6,7 +6,21 @@ const Hero = () => {
   const { t } = useTranslation()
 
   return (
-    <section className="gradient-bg text-white py-16 lg:py-24 w-full overflow-x-hidden" style={{ zIndex: '0 !important' }}>
+    <section 
+      className="text-white py-16 lg:py-24 w-full overflow-x-hidden relative" 
+      style={{ 
+        zIndex: '0 !important',
+        backgroundImage: 'url(/logo/bg.avif)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-600/90 via-primary-700/85 to-primary-800/90"></div>
+      
+      {/* Content */}
+      <div className="relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full" style={{ maxWidth: '100vw' }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -97,6 +111,7 @@ const Hero = () => {
             <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-green-400 rounded-full opacity-20 animate-bounce-slow animation-delay-200"></div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   )
