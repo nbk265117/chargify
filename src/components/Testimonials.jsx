@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import LogoText from './LogoText'
 
 const Testimonials = () => {
   const { t, i18n } = useTranslation();
@@ -150,7 +151,7 @@ const Testimonials = () => {
 
               {/* Comment */}
               <blockquote className="text-gray-600 leading-relaxed italic">
-                "{testimonial.comment}"
+                "<LogoText>{testimonial.comment}</LogoText>"
               </blockquote>
 
               {/* Quote Icon */}
@@ -195,7 +196,7 @@ const Testimonials = () => {
               {t('testimonials.joinSatisfiedClients')}
             </h3>
             <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-              {t('features.startToday')}
+              <LogoText>{t('features.startToday')}</LogoText>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#contact" className="bg-white text-primary-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">

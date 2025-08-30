@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { useRTL } from '../hooks/useRTL'
+import LogoText from './LogoText'
 
 const Features = () => {
   const { t } = useTranslation();
@@ -51,10 +52,10 @@ const Features = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 title-arabic">
-            {t('features.whyChoose')}
+            <LogoText>{t('features.whyChoose')}</LogoText>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto text-arabic">
-            {t('features.subtitle')}
+            <LogoText>{t('features.subtitle')}</LogoText>
           </p>
         </div>
 
@@ -82,7 +83,7 @@ const Features = () => {
 
               {/* Description */}
               <p className={`text-gray-600 leading-relaxed mb-6 text-arabic ${isRTL ? 'text-right' : 'text-left'}`}>
-                {t(card.descriptionKey)}
+                <LogoText>{t(card.descriptionKey)}</LogoText>
               </p>
             </div>
           ))}
@@ -117,7 +118,7 @@ const Features = () => {
               {t('testimonials.joinSatisfiedClients')}
             </h3>
             <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto text-arabic">
-              {t('features.startToday')}
+              <LogoText>{t('features.startToday')}</LogoText>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#contact" className="bg-white text-primary-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg btn-arabic">

@@ -38,7 +38,7 @@ const WhatsAppStickyV2 = () => {
     >
       {/* Contact Text */}
       <div className="text-center mb-2">
-        <span className="text-sm font-medium text-gray-700 bg-white px-3 py-1 rounded-full shadow-md border border-gray-200">
+        <span className="text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-pink-500 px-3 py-1 rounded-full shadow-md">
           تواصل معنا
         </span>
       </div>

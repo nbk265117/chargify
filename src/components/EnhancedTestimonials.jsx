@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import LogoText from './LogoText'
 
 const EnhancedTestimonials = () => {
   const { t } = useTranslation();
@@ -211,7 +212,7 @@ const EnhancedTestimonials = () => {
                 >
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                "{testimonials[currentIndex].comment}"
+                "<LogoText>{testimonials[currentIndex].comment}</LogoText>"
               </blockquote>
             </div>
           </div>
@@ -294,7 +295,7 @@ const EnhancedTestimonials = () => {
               </div>
               
               <blockquote className="text-gray-600 text-sm italic">
-                "{testimonial.comment.substring(0, 100)}..."
+                "<LogoText>{testimonial.comment.substring(0, 100)}...</LogoText>"
               </blockquote>
             </div>
           ))}
@@ -345,9 +346,9 @@ const EnhancedTestimonials = () => {
               <h3 className="text-2xl lg:text-3xl font-bold mb-4">
                 {t('testimonials.joinSatisfiedClients')}
               </h3>
-              <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-                {t('features.startToday')}
-              </p>
+                          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+              <LogoText>{t('features.startToday')}</LogoText>
+            </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="#contact" 

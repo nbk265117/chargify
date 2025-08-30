@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { useRTL } from '../hooks/useRTL'
+import LogoText from './LogoText'
 
 const Promo = () => {
   const { t } = useTranslation()
@@ -12,7 +13,7 @@ const Promo = () => {
         {/* Promo Section */}
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            {t('promo.title')}
+            <LogoText>{t('promo.title')}</LogoText>
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             {t('promo.subtitle')}

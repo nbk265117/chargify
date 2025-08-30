@@ -113,18 +113,6 @@ const Banks = () => {
             </div>
           ))}
         </div>
-
-        {/* Additional Info with Animation */}
-        <div className="text-center mt-12 animate-fade-in" style={{ animationDelay: '1200ms' }}>
-          <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4 title-arabic">
-              {t('features.security.title')}
-            </h3>
-            <p className="text-gray-600 text-arabic">
-              {t('features.security.description')}
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   )

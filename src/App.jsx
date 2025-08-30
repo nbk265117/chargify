@@ -14,6 +14,7 @@ import Promo from './components/Promo'
 import FAQ from './components/FAQ'
 import SEO from './components/SEO'
 import WhatsAppSticky from './components/WhatsAppSticky'
+import PromoSticky from './components/PromoSticky'
 
 import './index.css'
 
@@ -36,6 +37,7 @@ function App() {
           </main>
           <Footer />
           <WhatsAppSticky />
+          <PromoSticky />
           
         </div>
       </Router>

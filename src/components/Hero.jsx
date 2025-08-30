@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import LogoText from './LogoText'
 
 const Hero = () => {
   const { t } = useTranslation()
@@ -12,15 +13,15 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight title-arabic">
-                {t('hero.title')}
+                <LogoText>{t('hero.title')}</LogoText>
               </h1>
               <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 subtitle-arabic">
-                {t('hero.subtitle')}
+                <LogoText>{t('hero.subtitle')}</LogoText>
               </p>
             </div>
             
             <p className="text-base sm:text-lg text-blue-200 leading-relaxed text-arabic">
-              {t('hero.description')}
+              <LogoText>{t('hero.description')}</LogoText>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -61,7 +62,7 @@ const Hero = () => {
                   </div>
                   <div className="flex-1 rtl:text-right ltr:text-left">
                     <h3 className="text-base sm:text-lg font-semibold title-arabic rtl:text-right ltr:text-left">{t('services.deposit.title')}</h3>
-                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left">{t('services.deposit.description')}</p>
+                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left"><LogoText>{t('services.deposit.description')}</LogoText></p>
                   </div>
                 </div>
 
@@ -73,7 +74,7 @@ const Hero = () => {
                   </div>
                   <div className="flex-1 rtl:text-right ltr:text-left">
                     <h3 className="text-base sm:text-lg font-semibold title-arabic rtl:text-right ltr:text-left">{t('services.withdrawal.title')}</h3>
-                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left">{t('services.withdrawal.description')}</p>
+                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left"><LogoText>{t('services.withdrawal.description')}</LogoText></p>
                   </div>
                 </div>
 
@@ -85,7 +86,7 @@ const Hero = () => {
                   </div>
                   <div className="flex-1 rtl:text-right ltr:text-left">
                     <h3 className="text-base sm:text-lg font-semibold title-arabic rtl:text-right ltr:text-left">{t('services.support.title')}</h3>
-                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left">{t('services.support.description')}</p>
+                    <p className="text-sm sm:text-base text-blue-200 text-arabic rtl:text-right ltr:text-left"><LogoText>{t('services.support.description')}</LogoText></p>
                   </div>
                 </div>
               </div>

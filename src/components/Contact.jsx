@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useRTL } from '../hooks/useRTL'
+import LogoText from './LogoText'
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -77,7 +78,7 @@ const Contact = () => {
             {t('contact.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {t('contact.subtitle')}
+            <LogoText>{t('contact.subtitle')}</LogoText>
           </p>
         </div>
 
@@ -195,7 +196,7 @@ const Contact = () => {
                 {t('contact.contactInfo')}
               </h3>
               <p className="text-gray-600 mb-8">
-                {t('contact.contactDescription')}
+                <LogoText>{t('contact.contactDescription')}</LogoText>
               </p>
             </div>
 
@@ -240,7 +241,7 @@ const Contact = () => {
                   <svg className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className={isRTL ? 'text-right' : 'text-left'}>{t('contact.secureTransactions')}</span>
+                  <span className={isRTL ? 'text-right' : 'text-left'}><LogoText>{t('contact.secureTransactions')}</LogoText></span>
                 </li>
               </ul>
             </div>

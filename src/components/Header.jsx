@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import LanguageSelector from './LanguageSelector'
 import { useRTL } from '../hooks/useRTL'
+import LogoText from './LogoText'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -38,9 +39,9 @@ const Header = () => {
                 {/* Center - Logo */}
                 <div className="flex-shrink-0 text-center">
                   <h1 className="text-xl sm:text-2xl font-bold text-gradient">
-                    {t('hero.title')}
+                    <LogoText>{t('hero.title')}</LogoText>
                   </h1>
-                  <p className="text-xs text-gray-500 hidden sm:block">{t('hero.desc')}</p>
+                  <p className="text-xs text-gray-500 hidden sm:block"><LogoText>{t('hero.desc')}</LogoText></p>
                 </div>
                 
                 {/* Right - Hamburger Menu */}
@@ -81,9 +82,9 @@ const Header = () => {
                 {/* Center - Logo */}
                 <div className="flex-shrink-0 text-center">
                   <h1 className="text-xl sm:text-2xl font-bold text-gradient">
-                    {t('hero.title')}
+                    <LogoText>{t('hero.title')}</LogoText>
                   </h1>
-                  <p className="text-xs text-gray-500 hidden sm:block">{t('hero.desc')}</p>
+                  <p className="text-xs text-gray-500 hidden sm:block"><LogoText>{t('hero.desc')}</LogoText></p>
                 </div>
                 
                 {/* Right - Language Selector */}
@@ -103,9 +104,9 @@ const Header = () => {
                 <div className="flex items-center">
                   <div className="flex-shrink-0">
                     <h1 className="text-xl sm:text-2xl font-bold text-gradient">
-                      {t('hero.title')}
+                      <LogoText>{t('hero.title')}</LogoText>
                     </h1>
-                    <p className="text-xs text-gray-500 hidden sm:block">{t('hero.desc')}</p>
+                    <p className="text-xs text-gray-500 hidden sm:block"><LogoText>{t('hero.desc')}</LogoText></p>
                   </div>
                 </div>
 
@@ -140,9 +141,9 @@ const Header = () => {
                 <div className="flex items-center">
                   <div className="flex-shrink-0 text-start">
                     <h1 className="text-xl sm:text-2xl font-bold text-gradient">
-                      {t('hero.title')}
+                      <LogoText>{t('hero.title')}</LogoText>
                     </h1>
-                    <p className="text-xs text-gray-500 hidden sm:block">{t('hero.desc')}</p>
+                    <p className="text-xs text-gray-500 hidden sm:block"><LogoText>{t('hero.desc')}</LogoText></p>
                   </div>
                 </div>
 

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaStar, FaQuoteLeft, FaChevronLeft, FaChevronRight, FaHeart } from 'react-icons/fa';
 import { MdLocationOn } from 'react-icons/md';
 import CountUp from 'react-countup';
+import LogoText from './LogoText';
 
 const SimpleTestimonials = () => {
   const { t } = useTranslation();
@@ -266,7 +267,7 @@ const SimpleTestimonials = () => {
                 >
                   <FaQuoteLeft className="absolute -top-4 -left-4 w-8 h-8 text-primary-300 opacity-50" />
                   <FaQuoteLeft className="absolute -bottom-4 -right-4 w-8 h-8 text-primary-300 opacity-50 transform rotate-180" />
-                  "{testimonials[currentIndex].comment}"
+                  "<LogoText>{testimonials[currentIndex].comment}</LogoText>"
                 </motion.blockquote>
 
                 {/* Bouton de like */}
@@ -417,7 +418,7 @@ const SimpleTestimonials = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                {t('features.startToday')}
+                <LogoText>{t('features.startToday')}</LogoText>
               </motion.p>
               <motion.div 
                 className="flex flex-col sm:flex-row gap-6 justify-center"
