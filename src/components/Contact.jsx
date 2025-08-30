@@ -70,21 +70,21 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-12 bg-white">
+    <section id="contact" className="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             {t('contact.title')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             <LogoText>{t('contact.subtitle')}</LogoText>
           </p>
         </div>
 
         <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 ${isRTL ? 'lg:grid-cols-2-reverse' : ''}`}>
           {/* Contact Form */}
-          <div className={`bg-gray-50 rounded-2xl p-8 ${isRTL ? 'text-right' : 'text-left'}`}>
+          <div className={`bg-white rounded-2xl p-8 shadow-xl border border-gray-100 ${isRTL ? 'text-right' : 'text-left'}`}>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               {t('contact.sendMessage')}
             </h3>
@@ -192,31 +192,31 @@ const Contact = () => {
           {/* Contact Information */}
           <div className={`space-y-8 ${isRTL ? 'text-right' : 'text-left'}`}>
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">
                 {t('contact.contactInfo')}
               </h3>
-              <p className="text-gray-600 mb-8">
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 <LogoText>{t('contact.contactDescription')}</LogoText>
               </p>
             </div>
 
             {/* Contact Methods */}
-            <div className="space-y-6">
+            <div className="space-y-4">
               {contactMethods.map((method, index) => (
-                <div key={index} className={`flex items-center ${isRTL ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
-                  <div className={`${method.color} text-white w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0`}>
+                <div key={index} className={`flex items-center ${isRTL ? 'space-x-reverse space-x-4' : 'space-x-4'} p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300`}>
+                  <div className={`${method.color} text-white w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg`}>
                     {method.icon}
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900">{method.name}</h4>
-                    <p className="text-gray-600">{method.value}</p>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-gray-900 text-lg mb-1">{method.name}</h4>
+                    <p className="text-gray-600 font-medium">{method.value}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Additional Info */}
-            <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-xl p-6 border border-primary-100">
+            <div className="bg-gradient-to-r from-primary-50 to-blue-50 rounded-xl p-6 border border-primary-100 shadow-lg">
               <h4 className="font-semibold text-gray-900 mb-3">{t('contact.importantInfo')}</h4>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex items-start">
