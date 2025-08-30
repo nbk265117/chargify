@@ -17,6 +17,7 @@
   "nav": {
     "home": "Accueil",
     "services": "Services",
+    "banks": "Banques",
     "about": "À propos",
     "contact": "Contact"
   },
@@ -235,5 +236,10 @@
     "contactUs": "Contactez-nous sur WhatsApp",
     "phoneNumber": "+212 777-298195",
     "defaultMessage": "Bonjour! Je voudrais des informations sur les services Chargify"
+  },
+  "banks": {
+    "title": "Banques Marocaines Supportées",
+    "subtitle": "Nous travaillons avec toutes les principales banques marocaines",
+    "description": "Nous fournissons nos services avec toutes les banques marocaines agréées, vous garantissant un accès facile à nos services depuis n'importe quelle banque."
   }
 }

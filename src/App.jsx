@@ -7,6 +7,7 @@ import Features from './components/Features'
 import HowItWorks from './components/HowItWorks'
 import Testimonials from './components/Testimonials'
 import AdvancedTestimonials from './components/AdvancedTestimonials'
+import Banks from './components/Banks'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Promo from './components/Promo'
@@ -26,6 +27,7 @@ function App() {
           <main>
             <Hero />
             <Features />
+            <Banks />
             <HowItWorks />
             <AdvancedTestimonials />
             <Promo />

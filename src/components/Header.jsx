@@ -114,6 +114,9 @@ const Header = () => {
                   <a href="#features" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
                     {t('nav.services')}
                   </a>
+                  <a href="#banks" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
+                    {t('nav.banks')}
+                  </a>
                   <a href="#how-it-works" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
                     {t('howItWorks.title')}
                   </a>
@@ -148,6 +151,9 @@ const Header = () => {
                   <a href="#features" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
                     {t('nav.services')}
                   </a>
+                  <a href="#banks" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
+                    {t('nav.banks')}
+                  </a>
                   <a href="#how-it-works" className="text-gray-700 hover:text-primary-600 transition-colors duration-300">
                     {t('howItWorks.title')}
                   </a>
@@ -178,6 +184,13 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('nav.services')}
+              </a>
+              <a
+                href="#banks"
+                className="block px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('nav.banks')}
               </a>
               <a
                 href="#how-it-works"
