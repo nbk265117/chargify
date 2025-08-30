@@ -72,6 +72,13 @@ const Contact = () => {
     window.open(telegramUrl, '_blank', 'noopener,noreferrer')
   }
 
+  const handleEmailClick = (email) => {
+    const subject = "معلومات عن خدمات شَرجِفاي"
+    const body = t('whatsapp.defaultMessage')
+    const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    window.open(mailtoUrl, '_blank', 'noopener,noreferrer')
+  }
+
   const contactMethods = [
     {
       name: "WhatsApp",
@@ -99,13 +106,15 @@ const Contact = () => {
     },
     {
       name: "Email",
-      value: "contact@chargify.com",
+      value: "contact@chargify.store",
+      email: "contact@chargify.store",
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
-      color: "bg-red-500"
+      color: "bg-red-500",
+      isClickable: true
     }
   ]
 
@@ -254,6 +263,8 @@ const Contact = () => {
                       handleWhatsAppClick(method.phoneNumber)
                     } else if (method.username) {
                       handleTelegramClick(method.username)
+                    } else if (method.email) {
+                      handleEmailClick(method.email)
                     }
                   } : undefined}
                 >
