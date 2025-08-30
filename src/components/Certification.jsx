@@ -10,7 +10,17 @@ const Certification = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 animate-fade-in">
-            <LogoText>شَرجِفاي</LogoText> وكالة موثوقة فـ 1xBet
+            <LogoText>شَرجِفاي</LogoText> وكالة موثوقة لدى{' '}
+            <img
+              src="/logo/1xbet.webp"
+              alt="1xbet"
+              className="inline-block align-middle"
+              style={{
+                height: '1.2em',
+                width: 'auto',
+                verticalAlign: 'middle'
+              }}
+            />
           </h2>
           <div className="w-24 h-1 bg-primary-600 mx-auto rounded-full animate-slide-in"></div>
         </div>
