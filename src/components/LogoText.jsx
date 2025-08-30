@@ -10,17 +10,26 @@ const LogoText = ({ children, className = "", logoHeight = "1.2em", logoWidth = 
     return parts.map((part, index) => {
       if (part.toLowerCase() === '1xbet') {
         return (
-          <img
+          <span
             key={index}
-            src="/logo/1xbet.webp"
-            alt="1xbet"
-            className="inline-block align-middle"
+            className="inline-flex items-center justify-center bg-white rounded px-2 py-1"
             style={{
               height: logoHeight,
-              width: logoWidth,
+              minWidth: logoHeight,
               verticalAlign: 'middle'
             }}
-          />
+          >
+            <img
+              src="/logo/1xbet.webp"
+              alt="1xbet"
+              className="inline-block align-middle"
+              style={{
+                height: `calc(${logoHeight} - 0.4em)`,
+                width: 'auto',
+                verticalAlign: 'middle'
+              }}
+            />
+          </span>
         );
       }
       if (part === 'شَرجِفاي') {
