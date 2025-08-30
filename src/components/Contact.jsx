@@ -76,7 +76,30 @@ const Contact = () => {
     const subject = "معلومات عن خدمات شَرجِفاي"
     const body = t('whatsapp.defaultMessage')
     const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    window.open(mailtoUrl, '_blank', 'noopener,noreferrer')
+    
+    // Create a temporary link element to trigger mailto
+    const link = document.createElement('a')
+    link.href = mailtoUrl
+    link.style.display = 'none'
+    document.body.appendChild(link)
+    
+    // Try to click the link
+    try {
+      link.click()
+      document.body.removeChild(link)
+    } catch (error) {
+      document.body.removeChild(link)
+      // Fallback: copy email to clipboard and show toast
+      navigator.clipboard.writeText(email).then(() => {
+        toast.success('تم نسخ البريد الإلكتروني إلى الحافظة', {
+          position: "top-right",
+          autoClose: 3000,
+        })
+      }).catch(() => {
+        // Final fallback: just show the email
+        alert(`البريد الإلكتروني: ${email}`)
+      })
+    }
   }
 
   const contactMethods = [
