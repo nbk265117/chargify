@@ -31,12 +31,20 @@ const Certification = () => {
           {/* Content */}
           <div className="space-y-8 animate-fade-in-right">
             <div className="space-y-6">
-              <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <p className="text-lg text-gray-700 font-medium">
-                  من الموقع الرسمي أو من التطبيق : 1xbet.com
-                </p>
-              </div>
+                             <div className="flex items-center space-x-3 rtl:space-x-reverse">
+                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                 <p className="text-lg text-gray-700 font-medium">
+                   من الموقع الرسمي أو من التطبيق :{' '}
+                   <a 
+                     href="https://1xbet.com" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="text-primary-600 hover:text-primary-700 underline font-semibold transition-colors duration-300"
+                   >
+                     1xbet.com
+                   </a>
+                 </p>
+               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
@@ -44,18 +52,18 @@ const Certification = () => {
                   كيفاش تأكّد
                 </h3>
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                    <p className="text-gray-700">دخل لـ السحب</p>
-                  </div>
-                  <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                    <p className="text-gray-700">اختار المدينة: Casablanca 📍</p>
-                  </div>
-                  <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                    <p className="text-gray-700">قلّب على <LogoText>شَرجِفاي</LogoText> (24/7) 🟦</p>
-                  </div>
+                                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
+                 <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
+                 <p className="text-gray-700">دخل لـ السحب (Withdrawal - Retrait)</p>
+               </div>
+               <div className="flex items-center space-x-3 rtl:space-x-reverse">
+                 <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
+                 <p className="text-gray-700">ابحث عن <LogoText>شَرجِفاي</LogoText> (24/7) 🟦</p>
+               </div>
+               <div className="flex items-center space-x-3 rtl:space-x-reverse">
+                 <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
+                 <p className="text-gray-700">اختار المدينة: Casablanca 📍الدارالبيضاء</p>
+               </div>
                 </div>
               </div>
 
@@ -64,10 +72,17 @@ const Certification = () => {
                   <span className="text-green-600 mr-2">☎️</span>
                   محتاج شي مساعدة؟ حنا خدامين 7/24:
                 </h4>
-                <div className="flex items-center space-x-3 rtl:space-x-reverse bg-white rounded-lg p-3 shadow-sm">
-                  <span className="text-green-600 text-xl">📲</span>
-                  <span className="text-gray-700 font-medium">واتساب: 07.77.29.81.95</span>
-                </div>
+                                 <div 
+                   className="flex items-center space-x-3 rtl:space-x-reverse bg-white rounded-lg p-3 shadow-sm cursor-pointer hover:bg-green-50 transition-colors duration-300"
+                   onClick={() => {
+                     const message = "مرحبا! أريد معلومات عن خدمات شَرجِفاي"
+                     const whatsappUrl = `https://wa.me/212777298195?text=${encodeURIComponent(message)}`
+                     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
+                   }}
+                 >
+                   <span className="text-green-600 text-xl">📲</span>
+                   <span className="text-gray-700 font-medium">واتساب: 07.77.29.81.95</span>
+                 </div>
               </div>
 
               <div className="flex flex-wrap gap-4">
