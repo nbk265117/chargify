@@ -199,20 +199,24 @@ const Contact = () => {
                 <LogoText>{t('contact.contactDescription')}</LogoText>
               </p>
             </div>
+            
+            {/* Contact Methods Container - Always LTR */}
+            <div className="ltr-container">
 
             {/* Contact Methods */}
             <div className="space-y-4">
               {contactMethods.map((method, index) => (
-                <div key={index} className={`flex items-center ${isRTL ? 'space-x-reverse space-x-4' : 'space-x-4'} p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300`}>
+                <div key={index} className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300" dir="ltr">
                   <div className={`${method.color} text-white w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg`}>
                     {method.icon}
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 text-left">
                     <h4 className="font-bold text-gray-900 text-lg mb-1">{method.name}</h4>
                     <p className="text-gray-600 font-medium">{method.value}</p>
                   </div>
                 </div>
               ))}
+            </div>
             </div>
 
             {/* Additional Info */}

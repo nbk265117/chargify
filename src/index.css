@@ -252,6 +252,12 @@
   }
 }
 
+/* LTR Container for contact methods */
+.ltr-container {
+  direction: ltr;
+  text-align: left;
+}
+
 /* Animations personnalisées */
 @keyframes fadeIn {
   from {
