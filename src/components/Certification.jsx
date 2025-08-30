@@ -56,10 +56,10 @@ const Certification = () => {
                  <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
                  <p className="text-gray-700">دخل لـ السحب (Withdrawal - Retrait)</p>
                </div>
-               <div className="flex items-center space-x-3 rtl:space-x-reverse">
-                 <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
-                 <p className="text-gray-700">ابحث عن <LogoText>شَرجِفاي</LogoText> (24/7) 🟦</p>
-               </div>
+                                <div className="flex items-center space-x-3 rtl:space-x-reverse">
+                   <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
+                   <p className="text-gray-700">ابحث عن Chargify (24/7) 🟦</p>
+                 </div>
                <div className="flex items-center space-x-3 rtl:space-x-reverse">
                  <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
                  <p className="text-gray-700">اختار المدينة: Casablanca 📍الدارالبيضاء</p>
