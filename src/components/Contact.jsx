@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useRTL } from '../hooks/useRTL'
+import { toast } from 'react-toastify'
 import LogoText from './LogoText'
 
 const Contact = () => {
@@ -24,9 +25,32 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Ici vous pouvez ajouter la logique d'envoi du formulaire
-    console.log('Form submitted:', formData)
-    alert(t('contact.thankYouMessage'))
+    
+    // Create WhatsApp message with form data
+    const whatsappMessage = `مرحبا! أريد معلومات عن خدمات شَرجِفاي
+
+الاسم: ${formData.name}
+الهاتف: ${formData.phone}
+البريد الإلكتروني: ${formData.email}
+الخدمة المطلوبة: ${formData.service}
+الرسالة: ${formData.message}`
+
+    // Show success toast
+    toast.success(t('contact.thankYouMessage'), {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    })
+
+    // Redirect to WhatsApp with the message
+    const whatsappUrl = `https://wa.me/212777298195?text=${encodeURIComponent(whatsappMessage)}`
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
+    
+    // Reset form
     setFormData({
       name: '',
       email: '',

@@ -1,6 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Features from './components/Features'
@@ -38,7 +40,18 @@ function App() {
           <Footer />
           <WhatsAppSticky />
           <PromoSticky />
-          
+          <ToastContainer 
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+          />
         </div>
       </Router>
     </HelmetProvider>
