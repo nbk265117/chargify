@@ -163,6 +163,12 @@ const AdvancedTestimonials = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             {t('testimonials.whatOurClientsSay')}
           </h2>
+          <motion.div 
+            className="w-24 h-1 bg-primary-600 mx-auto rounded-full mb-6"
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          ></motion.div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             {t('testimonials.subtitle')}
           </p>

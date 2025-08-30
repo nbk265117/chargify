@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { useRTL } from '../hooks/useRTL'
+import { motion } from 'framer-motion'
 
 const Banks = () => {
   const { t } = useTranslation();
@@ -67,17 +68,48 @@ const Banks = () => {
     <section id="banks" className="py-16 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Animation */}
-        <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 title-arabic animate-slide-up">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h2 
+            className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 title-arabic"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             {t('banks.title')}
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto text-arabic animate-slide-up" style={{ animationDelay: '200ms' }}>
+          </motion.h2>
+          <motion.div 
+            className="w-24 h-1 bg-primary-600 mx-auto rounded-full mb-6"
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          ></motion.div>
+          <motion.p 
+            className="text-xl text-gray-600 max-w-3xl mx-auto text-arabic"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
             {t('banks.subtitle')}
-          </p>
-          <p className="text-lg text-gray-500 mt-4 max-w-2xl mx-auto text-arabic animate-slide-up" style={{ animationDelay: '400ms' }}>
+          </motion.p>
+          <motion.p 
+            className="text-lg text-gray-500 mt-4 max-w-2xl mx-auto text-arabic"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
             {t('banks.description')}
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Banks Grid with Enhanced Animations */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">

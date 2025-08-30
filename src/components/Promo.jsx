@@ -35,6 +35,13 @@ const Promo = () => {
           >
             <LogoText>{t('promo.title')}</LogoText>
           </motion.h2>
+          <motion.div 
+            className="w-24 h-1 bg-primary-600 mx-auto rounded-full mb-6"
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          ></motion.div>
           <motion.p 
             className="text-xl text-gray-600 mb-8"
             initial={{ opacity: 0, y: 30 }}

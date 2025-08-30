@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { motion } from 'framer-motion'
 
 const HowItWorks = () => {
   const { t } = useTranslation();
@@ -55,14 +56,39 @@ const HowItWorks = () => {
     <section id="how-it-works" className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h2 
+            className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             {t('howItWorks.title')}
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.div 
+            className="w-24 h-1 bg-primary-600 mx-auto rounded-full mb-6"
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          ></motion.div>
+          <motion.p 
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
             {t('howItWorks.subtitle')}
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Steps */}
         <div className="relative">

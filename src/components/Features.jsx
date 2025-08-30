@@ -67,6 +67,13 @@ const Features = () => {
           >
             <LogoText>{t('features.whyChoose')}</LogoText>
           </motion.h2>
+          <motion.div 
+            className="w-24 h-1 bg-primary-600 mx-auto rounded-full"
+            initial={{ opacity: 0, scaleX: 0 }}
+            whileInView={{ opacity: 1, scaleX: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          ></motion.div>
           <motion.p 
             className="text-xl text-gray-600 max-w-3xl mx-auto text-arabic"
             initial={{ opacity: 0, y: 30 }}
