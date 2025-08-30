@@ -28,19 +28,19 @@ const PromoSticky = () => {
         {/* Promo Button */}
         <button
           onClick={handlePromoClick}
-          className="promo-sticky-button block bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 touch-manipulation h-full flex flex-col items-center justify-center px-3 py-2"
+          className="promo-sticky-button block bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 touch-manipulation h-full flex flex-col items-center justify-center px-3 py-2"
           aria-label="كود الترويجي FLY255"
           title="كود الترويجي FLY255"
         >
-          <div className="text-xs font-bold leading-tight">PROMO: FLY255</div>
-          <div className="text-xs font-bold leading-tight">2000 درهم</div>
+          <div className="text-xs font-bold leading-tight">PROMO: <span className="text-sm">FLY255</span></div>
+          <div className="text-xs font-bold leading-tight">تسجل وربح 2000 درهم</div>
         </button>
 
         {/* Pulse Animation */}
-        <div className="absolute inset-0 bg-purple-400 rounded-lg promo-pulse pointer-events-none"></div>
+        <div className="absolute inset-0 bg-yellow-300 rounded-lg promo-pulse pointer-events-none"></div>
         
         {/* Glow Effect */}
-        <div className="absolute inset-0 bg-purple-300 rounded-lg animate-pulse opacity-20 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-amber-300 rounded-lg animate-pulse opacity-20 pointer-events-none"></div>
       </div>
 
       {/* Promo Content Popup */}

@@ -37,10 +37,24 @@ const WhatsAppStickyV2 = () => {
       className="fixed bottom-6 sm:bottom-8 z-[9999] left-1/2 transform -translate-x-1/2 flex flex-col items-center"
     >
       {/* Contact Text */}
-      <div className="text-center mb-2">
-        <span className="text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-pink-500 px-3 py-1 rounded-full shadow-md">
+      <div className="text-center">
+        <span className="text-xs text-white font-medium bg-gradient-to-r from-blue-500 to-cyan-500 px-2 py-1 rounded-full shadow-md contact-text-animation hover:from-cyan-500 hover:to-blue-500 cursor-pointer">
           تواصل معنا
         </span>
+        <div 
+          className="text-xs text-white mt-1 font-medium bg-gradient-to-r from-blue-500 to-cyan-500 px-2 py-1 rounded-full shadow-md contact-text-animation hover:from-cyan-500 hover:to-blue-500 cursor-pointer"
+          onClick={handleWhatsAppClick}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              handleWhatsAppClick();
+            }
+          }}
+        >
+          07.77.29.81.95
+        </div>
       </div>
 
       {/* WhatsApp Button Container */}

@@ -1,13 +1,13 @@
 /* Promo Sticky Button Styles */
 .promo-sticky-button {
   animation: promo-bounce 2s infinite;
-  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.3);
+  box-shadow: 0 10px 25px rgba(251, 191, 36, 0.3);
 }
 
 .promo-sticky-button:hover {
   animation: none;
   transform: scale(1.1);
-  box-shadow: 0 15px 35px rgba(168, 85, 247, 0.4);
+  box-shadow: 0 15px 35px rgba(251, 191, 36, 0.4);
 }
 
 .promo-sticky-button:active {
@@ -54,10 +54,10 @@
 
 @keyframes promo-glow {
   from {
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
   }
   to {
-    box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.6);
   }
 }
 

@@ -41,7 +41,7 @@ const Header = () => {
                   <h1 className="text-xl sm:text-2xl font-bold text-gradient">
                     <LogoText>{t('hero.title')}</LogoText>
                   </h1>
-                  <p className="text-xs text-gray-500 hidden sm:block"><LogoText>{t('hero.desc')}</LogoText></p>
+                  <p className="text-xs text-gray-500 block"><LogoText>{t('hero.desc')}</LogoText></p>
                 </div>
                 
                 {/* Right - Hamburger Menu */}
@@ -84,7 +84,7 @@ const Header = () => {
                   <h1 className="text-xl sm:text-2xl font-bold text-gradient">
                     <LogoText>{t('hero.title')}</LogoText>
                   </h1>
-                  <p className="text-xs text-gray-500 hidden sm:block"><LogoText>{t('hero.desc')}</LogoText></p>
+                  <p className="text-xs text-gray-500 block"><LogoText>{t('hero.desc')}</LogoText></p>
                 </div>
                 
                 {/* Right - Language Selector */}
@@ -106,7 +106,7 @@ const Header = () => {
                     <h1 className="text-xl sm:text-2xl font-bold text-gradient">
                       <LogoText>{t('hero.title')}</LogoText>
                     </h1>
-                    <p className="text-xs text-gray-500 hidden sm:block"><LogoText>{t('hero.desc')}</LogoText></p>
+                    <p className="text-xs text-gray-500 block"><LogoText>{t('hero.desc')}</LogoText></p>
                   </div>
                 </div>
 
@@ -143,7 +143,7 @@ const Header = () => {
                     <h1 className="text-xl sm:text-2xl font-bold text-gradient">
                       <LogoText>{t('hero.title')}</LogoText>
                     </h1>
-                    <p className="text-xs text-gray-500 hidden sm:block"><LogoText>{t('hero.desc')}</LogoText></p>
+                    <p className="text-xs text-gray-500 block"><LogoText>{t('hero.desc')}</LogoText></p>
                   </div>
                 </div>
 

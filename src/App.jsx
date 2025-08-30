@@ -19,6 +19,7 @@ import FAQ from './components/FAQ'
 import SEO from './components/SEO'
 import WhatsAppSticky from './components/WhatsAppSticky'
 import PromoSticky from './components/PromoSticky'
+import ScrollToTop from './components/ScrollToTop'
 
 import './index.css'
 
@@ -45,6 +46,7 @@ function App() {
           <Footer />
           <WhatsAppSticky />
           <PromoSticky />
+          <ScrollToTop />
           <ToastContainer 
             position="top-right"
             autoClose={5000}
