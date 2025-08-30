@@ -7,14 +7,8 @@ const Hero = () => {
 
   return (
     <section 
-      className="text-white py-16 lg:py-24 w-full overflow-x-hidden relative" 
-      style={{ 
-        zIndex: '0 !important',
-        backgroundImage: 'url(/logo/bg.avif)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
+      className="text-white py-16 lg:py-24 w-full overflow-x-hidden relative hero-bg" 
+      style={{ zIndex: '0 !important' }}
     >
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-600/90 via-primary-700/85 to-primary-800/90"></div>

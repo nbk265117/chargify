@@ -222,6 +222,36 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
+/* Hero background with responsive image */
+.hero-bg {
+  background-image: url('/logo/bg.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-attachment: scroll;
+}
+
+/* Mobile responsive background */
+@media (max-width: 768px) {
+  .hero-bg {
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    min-height: 100vh;
+  }
+}
+
+/* Tablet responsive background */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-bg {
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    min-height: 100vh;
+  }
+}
+
 /* Animations personnalisées */
 @keyframes fadeIn {
   from {
