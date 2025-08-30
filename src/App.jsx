@@ -9,6 +9,7 @@ import Features from './components/Features'
 import HowItWorks from './components/HowItWorks'
 import Testimonials from './components/Testimonials'
 import AdvancedTestimonials from './components/AdvancedTestimonials'
+import Certification from './components/Certification'
 import Banks from './components/Banks'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -30,6 +31,7 @@ function App() {
           <main>
             <Hero />
             <Features />
+            <Certification />
             <Banks />
             <HowItWorks />
             <AdvancedTestimonials />
