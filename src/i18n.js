@@ -25,7 +25,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'ar',
+    fallbackLng: 'ar', // Restored Arabic as fallback for your target audience
     debug: false,
 
     interpolation: {
@@ -33,7 +33,7 @@ i18n
     },
 
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      order: ['localStorage', 'navigator', 'querystring', 'cookie'], // Removed 'htmlTag' to avoid conflicts
       caches: ['localStorage'],
       lookupLocalStorage: 'i18nextLng',
       lookupSessionStorage: 'i18nextLng',
@@ -80,8 +80,8 @@ const initializeLanguage = async () => {
     console.log('Saved language from storage:', savedLanguage);
     console.log('Default language:', defaultLanguage);
     
-    // Déterminer la langue initiale
-    let initialLanguage = 'ar'; // Fallback par défaut
+    // Déterminer la langue initiale - prioritize Arabic for your target audience
+    let initialLanguage = 'ar'; // Restored Arabic as default
     
     if (savedLanguage && isSupportedLanguage(savedLanguage)) {
       initialLanguage = savedLanguage;
@@ -90,7 +90,7 @@ const initializeLanguage = async () => {
       initialLanguage = defaultLanguage;
       console.log('Using browser language:', initialLanguage);
     } else {
-      console.log('Using fallback language: ar');
+      console.log('Using fallback language: ar (Arabic)');
     }
     
     // Forcer le changement de langue
@@ -104,7 +104,7 @@ const initializeLanguage = async () => {
     
   } catch (error) {
     console.error('Error initializing language:', error);
-    // Fallback vers l'arabe en cas d'erreur
+    // Fallback vers l'arabe en cas d'erreur (restored Arabic fallback)
     await i18n.changeLanguage('ar');
     initializeRTL();
   }

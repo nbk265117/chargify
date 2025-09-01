@@ -12,55 +12,55 @@ const Banks = () => {
       id: 1,
       name: "Attijariwafa Bank",
       logo: "/banks/awb_logo.png",
-      alt: "بنك التجاري وفا بنك"
+      alt: t('banks.bankNames.attijariwafa')
     },
     {
       id: 2,
       name: "Banque Populaire",
       logo: "/banks/bp_logo.svg",
-      alt: "البنك الشعبي"
+      alt: t('banks.bankNames.populaire')
     },
     {
       id: 3,
       name: "Bank of Africa",
       logo: "/banks/boa_logo.png",
-      alt: "بنك أفريقيا"
+      alt: t('banks.bankNames.africa')
     },
     {
       id: 4,
       name: "CIH Bank",
       logo: "/banks/cih_logo.png",
-      alt: "بنك CIH"
+      alt: t('banks.bankNames.cih')
     },
     {
       id: 5,
       name: "CFG Bank",
       logo: "/banks/cfg_logo.svg",
-      alt: "CFG"
+      alt: t('banks.bankNames.cfg')
     },
     {
       id: 6,
       name: "Crédit du Maroc",
       logo: "/banks/cdm_logo.svg",
-      alt: "كريديت دو ماروك"
+      alt: t('banks.bankNames.creditMaroc')
     },
     {
       id: 7,
       name: "Saham Assurance",
       logo: "/banks/saham_logo.svg",
-      alt: "سهام للتأمين"
+      alt: t('banks.bankNames.saham')
     },
     {
       id: 8,
       name: "Cash Plus",
       logo: "/banks/cashplus_logo.svg",
-      alt: "كاش بلاس"
+      alt: t('banks.bankNames.cashPlus')
     },
     {
       id: 9,
       name: "Jibi",
       logo: "/banks/jibi_logo.png",
-      alt: "جيبى"
+      alt: t('banks.bankNames.jibi')
     }
   ];
 

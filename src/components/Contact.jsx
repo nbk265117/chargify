@@ -27,14 +27,14 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     
-    // Create WhatsApp message with form data
-    const whatsappMessage = `مرحبا! أريد معلومات عن خدمات شَرجِفاي
-
-الاسم: ${formData.name}
-الهاتف: ${formData.phone}
-البريد الإلكتروني: ${formData.email}
-الخدمة المطلوبة: ${formData.service}
-الرسالة: ${formData.message}`
+    // Create WhatsApp message with form data using i18n
+    const whatsappMessage = t('contact.whatsappMessage', {
+      name: formData.name,
+      phone: formData.phone,
+      email: formData.email,
+      service: formData.service,
+      message: formData.message
+    })
 
     // Show success toast
     toast.success(t('contact.thankYouMessage'), {
@@ -74,7 +74,7 @@ const Contact = () => {
   }
 
   const handleEmailClick = (email) => {
-    const subject = "معلومات عن خدمات شَرجِفاي"
+    const subject = t('contact.emailSubject')
     const body = t('whatsapp.defaultMessage')
     const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     
@@ -92,13 +92,13 @@ const Contact = () => {
       document.body.removeChild(link)
       // Fallback: copy email to clipboard and show toast
       navigator.clipboard.writeText(email).then(() => {
-        toast.success('تم نسخ البريد الإلكتروني إلى الحافظة', {
+        toast.success(t('contact.emailCopied'), {
           position: "top-right",
           autoClose: 3000,
         })
       }).catch(() => {
         // Final fallback: just show the email
-        alert(`البريد الإلكتروني: ${email}`)
+        alert(t('contact.emailDisplay', { email }))
       })
     }
   }

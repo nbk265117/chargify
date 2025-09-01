@@ -6,11 +6,8 @@ import './index.css'
 import './rtl.css'
 import './i18n.js'
 
-// Force Arabic as default language
-import i18n from './i18n.js'
-if (!localStorage.getItem('i18nextLng')) {
-  i18n.changeLanguage('ar')
-}
+// Let i18n handle language detection automatically
+// The i18n.js file will handle language persistence and browser detection
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

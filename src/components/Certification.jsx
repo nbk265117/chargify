@@ -125,17 +125,17 @@ const Certification = () => {
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 rtl:space-x-reverse bg-green-100 rounded-full px-4 py-2">
                   <span className="text-green-600">⚡</span>
-                  <span className="text-green-800 font-medium">السرعة</span>
+                  <span className="text-green-800 font-medium">{t('certification.badges.speed')}</span>
                   <span className="text-green-600">✔️</span>
                 </div>
                 <div className="flex items-center space-x-2 rtl:space-x-reverse bg-blue-100 rounded-full px-4 py-2">
                   <span className="text-blue-600">🛡️</span>
-                  <span className="text-blue-800 font-medium">الأمان</span>
+                  <span className="text-blue-800 font-medium">{t('certification.badges.security')}</span>
                   <span className="text-blue-600">✔️</span>
                 </div>
                 <div className="flex items-center space-x-2 rtl:space-x-reverse bg-purple-100 rounded-full px-4 py-2">
                   <span className="text-purple-600">💎</span>
-                  <span className="text-purple-800 font-medium">الخدمة ديالكم فوق كلشي</span>
+                  <span className="text-purple-800 font-medium">{t('certification.badges.service')}</span>
                   <span className="text-purple-600">✔️</span>
                 </div>
               </div>

@@ -158,32 +158,31 @@
   "contact": {
     "title": "Contactez-nous",
     "subtitle": "Nous sommes là pour vous aider",
-    "readyToStart": "Prêt à recharger votre compte ? Contactez-nous sur WhatsApp !",
-    "sendMessage": "Envoyez-nous un message",
-    "name": "Nom complet",
-    "email": "Adresse e-mail",
-    "phone": "Téléphone",
-    "service": "Service demandé",
-    "message": "Message",
-    "send": "Envoyer le message",
-    "address": "Adresse",
-    "namePlaceholder": "Votre nom complet",
-    "phonePlaceholder": "Votre numéro de téléphone",
-    "emailPlaceholder": "Votre adresse e-mail",
-    "selectService": "Choisissez un service",
-    "recharge": "Recharge de compte",
-    "deposit": "Dépôt d’argent",
-    "withdrawal": "Retrait d’argent",
-    "other": "Autre",
-    "messagePlaceholder": "Décrivez votre demande...",
-    "contactInfo": "Informations de contact",
-    "contactDescription": "Notre support est disponible 24/7. Support direct via WhatsApp.",
-    "importantInfo": "Informations importantes",
-    "available24h": "Support disponible 24/7",
-    "processing5min": "Recharge et retrait en seulement 5 minutes",
-    "multilingualSupport": "Toutes les banques marocaines sont supportées",
-    "secureTransactions": "Agent agréé et fiable par 1XBET",
-    "thankYouMessage": "Merci pour votre message ! Nous vous contacterons bientôt."
+    "description": "Reach us via WhatsApp or phone",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "service": "Service demandé",
+      "message": "Message",
+      "submit": "Envoyer",
+      "placeholder": {
+        "name": "Entrez votre nom",
+        "email": "Entrez votre email",
+        "phone": "Entrez votre téléphone",
+        "service": "Choisissez le service",
+        "message": "Écrivez votre message ici..."
+      }
+    },
+    "whatsappMessage": "Bonjour ! Je veux des informations sur les services Chargify\n\nNom: {name}\nTéléphone: {phone}\nEmail: {email}\nService demandé: {service}\nMessage: {message}",
+    "emailSubject": "Informations sur les services Chargify",
+    "thankYouMessage": "Merci ! Nous vous contacterons bientôt.",
+    "emailCopied": "Email copié dans le presse-papiers",
+    "emailDisplay": "Email: {email}",
+    "methods": {
+      "title": "Méthodes de contact",
+      "description": "Choisissez la méthode que vous préférez pour nous contacter"
+    }
   },
   "footer": {
     "description": "",
@@ -293,12 +292,26 @@
     "title": "WhatsApp",
     "contactUs": "Contactez-nous via WhatsApp",
     "phoneNumber": "+212 777-298195",
-    "defaultMessage": "Bonjour ! Je voudrais des informations sur les services de Chargify"
+    "defaultMessage": "Bonjour ! Je voudrais des informations sur les services de Chargify",
+    "contactText": "Contactez-nous",
+    "phoneDisplay": "07.77.29.81.95"
   },
   "banks": {
     "title": "Banques marocaines que nous supportons",
     "subtitle": "Nous travaillons avec toutes les principales banques marocaines",
-    "description": "Nous offrons nos services avec toutes les banques marocaines agréées, garantissant un accès facile à nos services depuis n’importe quelle banque."
+    "description": "Nous offrons nos services avec toutes les banques marocaines agréées, garantissant un accès facile à nos services depuis n'importe quelle banque.",
+    "alt": "Banques marocaines que nous supportons",
+    "bankNames": {
+      "attijariwafa": "Attijariwafa Bank",
+      "populaire": "Banque Populaire",
+      "africa": "Bank of Africa",
+      "cih": "CIH Bank",
+      "cfg": "CFG Bank",
+      "creditMaroc": "Crédit du Maroc",
+      "saham": "Saham Assurance",
+      "cashPlus": "Cash Plus",
+      "jibi": "Jibi"
+    }
   },
   "certification": {
     "title": "Chargify Agence de confiance pour",
@@ -309,7 +322,12 @@
     "officialSite": "Depuis le site officiel ou l'application :",
     "needHelp": "Besoin d'aide ? Nous sommes disponibles 24/7 :",
     "whatsappNumber": "WhatsApp: 07.77.29.81.95",
-    "whatsappMessage": "Bonjour ! Je veux des informations sur les services Chargify"
+    "whatsappMessage": "Bonjour ! Je veux des informations sur les services Chargify",
+    "badges": {
+      "speed": "Rapidité",
+      "security": "Sécurité",
+      "service": "Votre service avant tout"
+    }
   },
   "promoSticky": {
     "promoLabel": "PROMO:",

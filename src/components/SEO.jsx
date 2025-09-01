@@ -13,6 +13,17 @@ const SEO = ({
 }) => {
   const { t, i18n } = useTranslation();
   
+  // Debug logging
+  console.log('SEO Component - Current language:', i18n.language);
+  console.log('SEO Component - Is i18n ready:', i18n.isInitialized);
+  console.log('SEO Component - Available languages:', i18n.languages);
+  
+  // Wait for i18n to be ready before rendering
+  if (!i18n.isInitialized) {
+    console.log('SEO Component - Waiting for i18n to initialize...');
+    return null; // Don't render until i18n is ready
+  }
+  
   // Utiliser les métadonnées par défaut de la langue actuelle
   const defaultMeta = t('meta', { returnObjects: true });
   
@@ -27,6 +38,10 @@ const SEO = ({
   const isRTL = i18n.language === 'ar';
   const htmlLang = i18n.language;
   const htmlDir = isRTL ? 'rtl' : 'ltr';
+
+  console.log('SEO Component - Final title:', seoTitle);
+  console.log('SEO Component - Final language:', htmlLang);
+  console.log('SEO Component - Final direction:', htmlDir);
 
   return (
     <Helmet>

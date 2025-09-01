@@ -157,33 +157,32 @@
   },
   "contact": {
     "title": "Contact Us",
-    "subtitle": "We’re here to help",
-    "readyToStart": "Ready to recharge your account? Contact us on WhatsApp!",
-    "sendMessage": "Send us a message",
-    "name": "Full Name",
-    "email": "Email Address",
-    "phone": "Phone",
-    "service": "Requested Service",
-    "message": "Message",
-    "send": "Send Message",
-    "address": "Address",
-    "namePlaceholder": "Your full name",
-    "phonePlaceholder": "Your phone number",
-    "emailPlaceholder": "Your email address",
-    "selectService": "Select a service",
-    "recharge": "Account Recharge",
-    "deposit": "Money Deposit",
-    "withdrawal": "Money Withdrawal",
-    "other": "Other",
-    "messagePlaceholder": "Describe your request...",
-    "contactInfo": "Contact Information",
-    "contactDescription": "Our support is always available 24/7. Direct support via WhatsApp.",
-    "importantInfo": "Important Information",
-    "available24h": "Our support is available 24/7",
-    "processing5min": "Recharge and withdrawal in just 5 minutes",
-    "multilingualSupport": "All Moroccan banks supported",
-    "secureTransactions": "Authorized and trusted by 1XBET",
-    "thankYouMessage": "Thank you for your message! We will get back to you soon."
+    "subtitle": "We're here to help you",
+    "description": "Reach us via WhatsApp or phone",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "service": "Service needed",
+      "message": "Message",
+      "submit": "Send",
+      "placeholder": {
+        "name": "Enter your name",
+        "email": "Enter your email",
+        "phone": "Enter your phone",
+        "service": "Choose the service",
+        "message": "Write your message here..."
+      }
+    },
+    "whatsappMessage": "Hello! I want information about Chargify services\n\nName: {name}\nPhone: {phone}\nEmail: {email}\nService needed: {service}\nMessage: {message}",
+    "emailSubject": "Information about Chargify services",
+    "thankYouMessage": "Thank you! We'll contact you soon.",
+    "emailCopied": "Email copied to clipboard",
+    "emailDisplay": "Email: {email}",
+    "methods": {
+      "title": "Contact Methods",
+      "description": "Choose the method you prefer to contact us"
+    }
   },
   "footer": {
     "description": "",
@@ -293,12 +292,26 @@
     "title": "WhatsApp",
     "contactUs": "Contact us via WhatsApp",
     "phoneNumber": "+212 777-298195",
-    "defaultMessage": "Hello! I’d like some information about Chargify services"
+    "defaultMessage": "Hello! I'd like some information about Chargify services",
+    "contactText": "Contact Us",
+    "phoneDisplay": "07.77.29.81.95"
   },
   "banks": {
     "title": "Supported Moroccan Banks",
     "subtitle": "We work with all major Moroccan banks",
-    "description": "We provide our services with all accredited Moroccan banks, ensuring you easy access from any bank."
+    "description": "We provide our services with all accredited Moroccan banks, ensuring you easy access from any bank.",
+    "alt": "Supported Moroccan Banks",
+    "bankNames": {
+      "attijariwafa": "Attijariwafa Bank",
+      "populaire": "Banque Populaire",
+      "africa": "Bank of Africa",
+      "cih": "CIH Bank",
+      "cfg": "CFG Bank",
+      "creditMaroc": "Crédit du Maroc",
+      "saham": "Saham Assurance",
+      "cashPlus": "Cash Plus",
+      "jibi": "Jibi"
+    }
   },
   "certification": {
     "title": "Chargify Trusted Agency for",
@@ -309,7 +322,12 @@
     "officialSite": "From the official website or app:",
     "needHelp": "Need help? We're available 24/7:",
     "whatsappNumber": "WhatsApp: 07.77.29.81.95",
-    "whatsappMessage": "Hello! I want information about Chargify services"
+    "whatsappMessage": "Hello! I want information about Chargify services",
+    "badges": {
+      "speed": "Speed",
+      "security": "Security",
+      "service": "Your service above all"
+    }
   },
   "promoSticky": {
     "promoLabel": "PROMO:",

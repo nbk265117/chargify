@@ -65,8 +65,30 @@ export const getDefaultLanguage = () => {
     // Essayer de récupérer la langue du navigateur
     const browserLang = navigator.language || navigator.userLanguage;
     if (browserLang) {
+      console.log('Browser language detected:', browserLang);
+      
+      // Check for Arabic variants first (most common for your target audience)
+      if (browserLang.startsWith('ar') || browserLang.startsWith('ar-')) {
+        console.log('Arabic browser language detected');
+        return 'ar';
+      }
+      
+      // Check for French variants
+      if (browserLang.startsWith('fr') || browserLang.startsWith('fr-')) {
+        console.log('French browser language detected');
+        return 'fr';
+      }
+      
+      // Check for English variants
+      if (browserLang.startsWith('en') || browserLang.startsWith('en-')) {
+        console.log('English browser language detected');
+        return 'en';
+      }
+      
+      // Check for other languages that might be common in your region
       const shortLang = browserLang.split('-')[0];
       if (isSupportedLanguage(shortLang)) {
+        console.log(`Supported language detected: ${shortLang}`);
         return shortLang;
       }
     }
@@ -74,6 +96,7 @@ export const getDefaultLanguage = () => {
     console.error('Error getting browser language:', error);
   }
   
-  // Retourner l'arabe par défaut
+  // Return Arabic as fallback since your target audience is likely Arabic-speaking
+  console.log('Using Arabic as fallback language');
   return 'ar';
 };
