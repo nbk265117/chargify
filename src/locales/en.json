@@ -159,6 +159,8 @@
     "title": "Contact Us",
     "subtitle": "We're here to help you",
     "description": "Reach us via WhatsApp or phone",
+    "readyToStart": "Ready to recharge your account? Contact us on WhatsApp!",
+    "sendMessage": "Send us a message",
     "form": {
       "name": "Name",
       "email": "Email",
@@ -174,11 +176,28 @@
         "message": "Write your message here..."
       }
     },
+    "namePlaceholder": "Your full name",
+    "phonePlaceholder": "Your phone number",
+    "emailPlaceholder": "Your email address",
+    "selectService": "Select a service",
+    "recharge": "Account Recharge",
+    "deposit": "Money Deposit",
+    "withdrawal": "Money Withdrawal",
+    "other": "Other",
+    "messagePlaceholder": "Describe your request...",
+    "send": "Send Message",
     "whatsappMessage": "Hello! I want information about Chargify services\n\nName: {name}\nPhone: {phone}\nEmail: {email}\nService needed: {service}\nMessage: {message}",
     "emailSubject": "Information about Chargify services",
     "thankYouMessage": "Thank you! We'll contact you soon.",
     "emailCopied": "Email copied to clipboard",
     "emailDisplay": "Email: {email}",
+    "contactInfo": "Contact Information",
+    "contactDescription": "Our support is always available 24/7. Direct support via WhatsApp.",
+    "importantInfo": "Important Information",
+    "available24h": "Our support is available 24/7",
+    "processing5min": "Recharge and withdrawal in just 5 minutes",
+    "multilingualSupport": "All Moroccan banks supported",
+    "secureTransactions": "Authorized and trusted by 1XBET",
     "methods": {
       "title": "Contact Methods",
       "description": "Choose the method you prefer to contact us"

@@ -159,6 +159,8 @@
     "title": "تواصل معنا",
     "subtitle": "نحن هنا لمساعدتك",
     "description": "تواصل معنا عبر واتساب أو الهاتف",
+    "readyToStart": "جاهز تشحن حسابك؟ تواصل معنا عبر واتساب!",
+    "sendMessage": "أرسل لنا رسالة",
     "form": {
       "name": "الاسم",
       "email": "البريد الإلكتروني",
@@ -174,9 +176,28 @@
         "message": "اكتب رسالتك هنا..."
       }
     },
+    "namePlaceholder": "اسمك الكامل",
+    "phonePlaceholder": "رقم هاتفك",
+    "emailPlaceholder": "عنوان بريدك الإلكتروني",
+    "selectService": "اختر خدمة",
+    "recharge": "شحن الحساب",
+    "deposit": "إيداع الأموال",
+    "withdrawal": "سحب الأموال",
+    "other": "أخرى",
+    "messagePlaceholder": "صف طلبك...",
+    "send": "إرسال الرسالة",
     "whatsappMessage": "مرحبا! أريد معلومات عن خدمات شَرجِفاي\n\nالاسم: {name}\nالهاتف: {phone}\nالبريد الإلكتروني: {email}\nالخدمة المطلوبة: {service}\nالرسالة: {message}",
     "emailSubject": "معلومات عن خدمات شَرجِفاي",
     "thankYouMessage": "شكرا لك! سنتواصل معك قريبا.",
+    "emailCopied": "تم نسخ البريد الإلكتروني إلى الحافظة",
+    "emailDisplay": "البريد الإلكتروني: {email}",
+    "contactInfo": "معلومات الاتصال",
+    "contactDescription": "الدعم ديالنا ديما تحت خدمتكم 24/7. دعم مباشر عبر واتساب.",
+    "importantInfo": "معلومات مهمة",
+    "available24h": "الدعم ديالنا ديما تحت خدمتكم 24/7",
+    "processing5min": "الشحن والسحب في 5 دقائق فقط",
+    "multilingualSupport": "جميع الأبناك المغربية مدعومة",
+    "secureTransactions": "وسيط معتمد وموثوق عند 1XBET",
     "methods": {
       "title": "طرق التواصل",
       "description": "اختر الطريقة التي تفضلها للتواصل معنا"
