@@ -299,5 +299,16 @@
     "title": "Banques marocaines que nous supportons",
     "subtitle": "Nous travaillons avec toutes les principales banques marocaines",
     "description": "Nous offrons nos services avec toutes les banques marocaines agréées, garantissant un accès facile à nos services depuis n’importe quelle banque."
+  },
+  "certification": {
+    "title": "Chargify Agence de confiance pour",
+    "verificationTitle": "Comment vérifier",
+    "verificationStep1": "Allez dans Retrait (Withdrawal - Retrait)",
+    "verificationStep2": "Recherchez Chargify (24/7) 🟦",
+    "verificationStep3": "Choisissez la ville: Casablanca 📍Casablanca",
+    "officialSite": "Depuis le site officiel ou l'application :",
+    "needHelp": "Besoin d'aide ? Nous sommes disponibles 24/7 :",
+    "whatsappNumber": "WhatsApp: 07.77.29.81.95",
+    "whatsappMessage": "Bonjour ! Je veux des informations sur les services Chargify"
   }
 }

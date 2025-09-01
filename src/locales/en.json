@@ -299,5 +299,16 @@
     "title": "Supported Moroccan Banks",
     "subtitle": "We work with all major Moroccan banks",
     "description": "We provide our services with all accredited Moroccan banks, ensuring you easy access from any bank."
+  },
+  "certification": {
+    "title": "Chargify Trusted Agency for",
+    "verificationTitle": "How to verify",
+    "verificationStep1": "Go to Withdrawal (Withdrawal - Retrait)",
+    "verificationStep2": "Search for Chargify (24/7) 🟦",
+    "verificationStep3": "Choose city: Casablanca 📍Casablanca",
+    "officialSite": "From the official website or app:",
+    "needHelp": "Need help? We're available 24/7:",
+    "whatsappNumber": "WhatsApp: 07.77.29.81.95",
+    "whatsappMessage": "Hello! I want information about Chargify services"
   }
 }
