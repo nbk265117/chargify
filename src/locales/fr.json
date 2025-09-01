@@ -161,6 +161,11 @@
     "description": "Reach us via WhatsApp or phone",
     "readyToStart": "Prêt à recharger votre compte ? Contactez-nous sur WhatsApp !",
     "sendMessage": "Envoyez-nous un message",
+    "name": "Nom",
+    "phone": "Téléphone",
+    "email": "Email",
+    "service": "Service",
+    "message": "Message",
     "form": {
       "name": "Nom",
       "email": "Email",
