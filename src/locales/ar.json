@@ -310,5 +310,14 @@
     "needHelp": "محتاج شي مساعدة؟ حنا خدامين 7/24:",
     "whatsappNumber": "واتساب: 07.77.29.81.95",
     "whatsappMessage": "مرحبا! أريد معلومات عن خدمات شَرجِفاي"
+  },
+  "promoSticky": {
+    "promoLabel": "PROMO:",
+    "promoCode": "FLY255",
+    "actionText": "تسجل وربح 2000 درهم",
+    "ariaLabel": "كود الترويجي FLY255",
+    "popupTitle": "PROMO FLY255",
+    "popupAmount": "2000 درهم",
+    "popupDescription": "أول شحن كيوصل حتى 2000 درهم"
   }
 }

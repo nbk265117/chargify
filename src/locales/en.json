@@ -310,5 +310,14 @@
     "needHelp": "Need help? We're available 24/7:",
     "whatsappNumber": "WhatsApp: 07.77.29.81.95",
     "whatsappMessage": "Hello! I want information about Chargify services"
+  },
+  "promoSticky": {
+    "promoLabel": "PROMO:",
+    "promoCode": "FLY255",
+    "actionText": "Register and win 2000 dirhams",
+    "ariaLabel": "Promo code FLY255",
+    "popupTitle": "PROMO FLY255",
+    "popupAmount": "2000 dirhams",
+    "popupDescription": "First deposit up to 2000 dirhams"
   }
 }

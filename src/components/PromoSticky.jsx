@@ -9,7 +9,7 @@ const PromoSticky = () => {
   
   const handlePromoClick = () => {
     // Copy promo code to clipboard
-    navigator.clipboard.writeText('FLY255').then(() => {
+    navigator.clipboard.writeText(t('promoSticky.promoCode')).then(() => {
       // Show a brief notification (you can enhance this)
       console.log('Promo code copied to clipboard!')
     }).catch(err => {
@@ -29,11 +29,11 @@ const PromoSticky = () => {
         <button
           onClick={handlePromoClick}
           className="promo-sticky-button block bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black rounded-lg shadow-2xl hover:shadow-3xl transition-all duration-300 touch-manipulation h-full flex flex-col items-center justify-center px-3 py-2"
-          aria-label="كود الترويجي FLY255"
-          title="كود الترويجي FLY255"
+          aria-label={t('promoSticky.ariaLabel')}
+          title={t('promoSticky.ariaLabel')}
         >
-          <div className="text-xs font-bold leading-tight">PROMO: <span className="text-sm">FLY255</span></div>
-          <div className="text-xs font-bold leading-tight">تسجل وربح 2000 درهم</div>
+          <div className="text-xs font-bold leading-tight">{t('promoSticky.promoLabel')} <span className="text-sm">{t('promoSticky.promoCode')}</span></div>
+          <div className="text-xs font-bold leading-tight">{t('promoSticky.actionText')}</div>
         </button>
 
         {/* Pulse Animation */}
@@ -45,9 +45,9 @@ const PromoSticky = () => {
 
       {/* Promo Content Popup */}
       <div className="promo-content bg-white rounded-lg shadow-xl p-4 mb-3 border border-gray-200 text-center min-w-[200px]">
-        <div className="text-lg font-bold text-purple-600 mb-1">PROMO FLY255</div>
-        <div className="text-2xl font-bold text-gray-800">2000 درهم</div>
-        <div className="text-xs text-gray-500 mt-1">أول شحن كيوصل حتى 2000 درهم</div>
+        <div className="text-lg font-bold text-purple-600 mb-1">{t('promoSticky.popupTitle')}</div>
+        <div className="text-2xl font-bold text-gray-800">{t('promoSticky.popupAmount')}</div>
+        <div className="text-xs text-gray-500 mt-1">{t('promoSticky.popupDescription')}</div>
       </div>
     </div>
   )
