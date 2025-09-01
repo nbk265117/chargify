@@ -1,6 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import { getSavedLanguage, getDefaultLanguage, isSupportedLanguage } from './utils/languageUtils';
 
 // Import des traductions
 import fr from './locales/fr.json';
@@ -35,6 +36,11 @@ i18n
       order: ['localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
       lookupLocalStorage: 'i18nextLng',
+      lookupSessionStorage: 'i18nextLng',
+      lookupCookie: 'i18nextLng',
+      lookupQuerystring: 'lng',
+      lookupFromPathIndex: 0,
+      lookupFromSubdomainIndex: 0,
     },
 
     react: {
@@ -65,19 +71,27 @@ const initializeRTL = () => {
   }
 };
 
-// Forcer l'arabe comme langue par défaut
-localStorage.setItem('i18nextLng', 'ar');
+// Récupérer la langue sauvegardée ou utiliser la langue par défaut
+const savedLanguage = getSavedLanguage();
+const defaultLanguage = getDefaultLanguage();
+const initialLanguage = savedLanguage && isSupportedLanguage(savedLanguage) ? savedLanguage : defaultLanguage;
 
-// Forcer l'arabe comme langue actuelle
-i18n.changeLanguage('ar');
+// Initialiser avec la langue déterminée
+i18n.changeLanguage(initialLanguage);
 
 // Initialiser RTL au démarrage
 initializeRTL();
 
 // Écouter les changements de langue
-i18n.on('languageChanged', initializeRTL);
+i18n.on('languageChanged', (lng) => {
+  console.log('Language changed to:', lng);
+  initializeRTL();
+});
 
 // Debug: Log the current language
 console.log('i18n initialized with language:', i18n.language);
+console.log('Saved language from storage:', savedLanguage);
+console.log('Default language:', defaultLanguage);
+console.log('Initial language used:', initialLanguage);
 
 export default i18n;

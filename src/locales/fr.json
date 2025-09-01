@@ -3,211 +3,269 @@
     "name": "Chargify"
   },
   "meta": {
-    "title": "Chargify - Partenaire Officiel 1xbet",
-    "description": "La solution complète pour vos transactions 1xbet. Rechargez votre compte, effectuez des dépôts et retraits en toute sécurité.",
+    "title": "Chargify - Agent agréé 1xbet",
+    "description": "La solution complète pour vos transactions 1xbet. Recharge, dépôt, retrait en toute sécurité et rapidité.",
     "keywords": "1xbet, dépôt, retrait, recharge, transactions, sécurité, rapidité",
     "author": "Chargify",
-    "ogTitle": "Chargify - Partenaire Officiel 1xbet",
-    "ogDescription": "La solution complète pour vos transactions 1xbet. Rechargez votre compte, effectuez des dépôts et retraits en toute sécurité.",
+    "ogTitle": "Chargify - Agent agréé 1xbet",
+    "ogDescription": "La solution complète pour vos transactions 1xbet. Recharge, dépôt, retrait en toute sécurité et rapidité.",
     "ogImage": "/og-image-fr.jpg",
     "twitterCard": "summary_large_image",
-    "twitterTitle": "Chargify - Partenaire Officiel 1xbet",
+    "twitterTitle": "Chargify - Agent agréé 1xbet",
     "twitterDescription": "La solution complète pour vos transactions 1xbet"
   },
   "nav": {
     "home": "Accueil",
-    "services": "Services",
+    "services": "Nos services",
     "banks": "Banques",
     "about": "À propos",
-    "contact": "Contact"
+    "contact": "Contactez-nous"
   },
   "hero": {
     "title": "Chargify",
-    "subtitle": "Recharge, Dépôt, Retrait",
-    "description": "La solution complète pour vos transactions 1xbet. Rechargez votre compte, effectuez des dépôts et retraits en toute sécurité.",
-    "cta": "Commencer maintenant",
+    "desc": "Agent agréé 1xbet",
+    "subtitle": "Agent agréé 1xbet",
+    "description": "Nous vous offrons recharge et retrait avec votre ID en toute rapidité et fiabilité, avec le support de toutes les banques marocaines et même un service de livraison à domicile. Support en direct 24/7 pour votre confort.",
+    "cta": "Contactez-nous",
     "learnMore": "En savoir plus"
   },
   "features": {
-    "subtitle": "Votre partenaire de confiance pour 1xbet",
-    "whyChoose": "Pourquoi Choisir Chargify ?",
-    "howItWorks": "Comment ça marche",
-    "startToday": "Commencez dès aujourd'hui et profitez de nos services premium pour vos transactions 1xbet",
+    "subtitle": "",
+    "whyChoose": "Pourquoi choisir Chargify",
+    "howItWorks": "Comment ça marche ?",
+    "startToday": "Chargify est un agent agréé de la plateforme 1xbet offrant rapidité dans la recharge et le retrait, avec support de toutes les banques marocaines et même livraison à domicile.",
     "security": {
-      "title": "Sécurité maximale",
-      "description": "Transactions sécurisées avec cryptage SSL et protection des données"
+      "title": "Confiance et sécurité",
+      "description": "Agent agréé et fiable par 1XBET"
     },
     "speed": {
       "title": "Rapidité",
-      "description": "Transactions instantanées, pas d'attente"
+      "description": "Recharge et retrait en seulement 5 minutes"
     },
     "support": {
-      "title": "Support 24/7",
-      "description": "Assistance disponible à tout moment"
+      "title": "Support en direct",
+      "description": "Support direct via WhatsApp 24/7"
     },
     "fees": {
-      "title": "Frais réduits",
-      "description": "Tarifs compétitifs et transparents"
+      "title": "Service de livraison",
+      "description": "Livraison à domicile (cash ou virement)"
     },
-    "speedValue": "5min"
+    "speedValue": "5 minutes"
   },
   "services": {
-    "subtitle": "Solutions complètes pour vos besoins",
-    "readyToStart": "Prêt à commencer ?",
+    "subtitle": "Service rapide, sûr et garanti à 100%",
+    "readyToStart": "Prêt à recharger votre compte ?",
     "deposit": {
-      "title": "Dépôt",
-      "description": "Rechargez votre compte 1xbet rapidement et en toute sécurité"
+      "title": "Recharge",
+      "description": "Rechargez votre compte en un clic, rapide et fiable. Toutes les banques marocaines sont supportées, avec livraison possible à domicile."
     },
     "withdrawal": {
       "title": "Retrait",
-      "description": "Retirez vos gains facilement et rapidement"
+      "description": "Retirez vos gains directement sur votre compte bancaire ou recevez-les en cash chez vous."
     },
-    "recharge": {
-      "title": "Recharge",
-      "description": "Rechargez votre compte à tout moment"
-    },
-    "accountRecharge": {
-      "title": "Recharge de Compte",
-      "description": "Rechargez votre compte 1xbet instantanément avec nos méthodes de paiement sécurisées. Traitement en moins de 5 minutes.",
-      "features": [
-        "Paiement par ID",
-        "Traitement rapide",
-        "Support 24/7",
-        "Sécurisé"
-      ]
-    },
-    "moneyDeposit": {
-      "title": "Dépôt d'Argent",
-      "description": "Effectuez des dépôts sur votre compte 1xbet de manière sécurisée et rapide. Plusieurs méthodes de paiement disponibles.",
-      "features": [
-        "Méthodes multiples",
-        "Confirmation rapide",
-        "Historique détaillé",
-        "Frais réduits"
-      ]
-    },
-    "moneyWithdrawal": {
-      "title": "Retrait d'Argent",
-      "description": "Retirez vos gains rapidement et en toute sécurité. Service de retrait optimisé pour une expérience fluide.",
-      "features": [
-        "Retrait rapide",
-        "Vérification ID",
-        "Support dédié",
-        "Sécurité maximale"
-      ]
+    "support": {
+      "title": "Support en direct",
+      "description": "Support direct via WhatsApp 24/7"
     }
   },
   "howItWorks": {
-    "title": "Comment ça marche ?",
-    "subtitle": "Processus simple en 4 étapes",
-    "detailedProcess": "Processus Détaillé",
-    "readyToTry": "Prêt à Essayer ?",
+    "title": "Notre processus",
+    "subtitle": "Un processus simple en 4 étapes",
+    "detailedProcess": "Processus détaillé",
+    "readyToTry": "Prêt à recharger votre compte ?",
     "step1": {
       "title": "Contactez-nous",
       "description": "Contactez-nous via WhatsApp ou téléphone"
     },
     "step2": {
-      "title": "Accord sur le paiement",
-      "description": "Convenez de la méthode de paiement (virement bancaire / cash…)"
+      "title": "Confirmez le paiement",
+      "description": "Choisissez la méthode de paiement (virement / cash…)"
     },
     "step3": {
-      "title": "Envoyez votre ID",
+      "title": "Envoyez l’ID",
       "description": "Envoyez-nous votre ID"
     },
     "step4": {
       "title": "Recevez le service",
-      "description": "Recevez le rechargement ou retrait directement"
+      "description": "Recevez immédiatement la recharge ou le retrait"
     }
   },
   "testimonials": {
-    "title": "Ce que disent nos clients",
-    "subtitle": "Témoignages de confiance",
+    "title": "Témoignages clients",
+    "subtitle": "Avis de confiance",
     "whatOurClientsSay": "Ce que disent nos clients",
-    "joinSatisfiedClients": "Rejoignez nos clients satisfaits"
+    "joinSatisfiedClients": "Rejoignez nos clients satisfaits",
+    "likeThisTestimonial": "J’aime cet avis",
+    "pause": "Pause",
+    "play": "Lecture",
+    "items": [
+      {
+        "id": 1,
+        "name": "Ahmed M.",
+        "location": "Casablanca",
+        "rating": 5,
+        "comment": "Service excellent ! Ma recharge a été effectuée en exactement 3 minutes. L’équipe est respectueuse et réactive. Je recommande vivement !",
+        "service": "Recharge de compte",
+        "photo": "/testimonials/ahmed-mazouri.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Fatima K.",
+        "location": "Rabat",
+        "rating": 5,
+        "comment": "J’utilise Chargify depuis 6 mois. Aucun problème. Retrait rapide et support excellent. Très satisfaite !",
+        "service": "Retrait d’argent",
+        "photo": "/testimonials/fatima-karawi.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Youssef B.",
+        "location": "Fès",
+        "rating": 5,
+        "comment": "Agent 1xbet fiable. Transactions sécurisées et frais réduits. Très satisfait de leurs services.",
+        "service": "Dépôt d’argent",
+        "photo": "/testimonials/youssef-bakkali.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Amina S.",
+        "location": "Marrakech",
+        "rating": 5,
+        "comment": "Support 24/7 très efficace. J’avais une question tard le soir et j’ai eu une réponse immédiate. Très professionnels !",
+        "service": "Support",
+        "photo": "/testimonials/amina-saadi.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Karim L.",
+        "location": "Tanger",
+        "rating": 5,
+        "comment": "Service rapide et fiable. J’ai fait plusieurs transactions et tout s’est toujours bien passé. Je recommande !",
+        "service": "Recharge de compte",
+        "photo": "/testimonials/karim-louzi.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Nadia R.",
+        "location": "Agadir",
+        "rating": 5,
+        "comment": "Excellente expérience avec Chargify. Processus simple et confirmations rapides. Un service de qualité !",
+        "service": "Retrait d’argent",
+        "photo": "/testimonials/nadia-ramdani.jpg"
+      }
+    ]
   },
   "contact": {
     "title": "Contactez-nous",
     "subtitle": "Nous sommes là pour vous aider",
-    "readyToStart": "Prêt à commencer ? Contactez-nous dès maintenant pour vos transactions 1xbet",
+    "readyToStart": "Prêt à recharger votre compte ? Contactez-nous sur WhatsApp !",
     "sendMessage": "Envoyez-nous un message",
     "name": "Nom complet",
     "email": "Adresse e-mail",
     "phone": "Téléphone",
-    "service": "Service souhaité",
+    "service": "Service demandé",
     "message": "Message",
     "send": "Envoyer le message",
     "address": "Adresse",
     "namePlaceholder": "Votre nom complet",
     "phonePlaceholder": "Votre numéro de téléphone",
-    "emailPlaceholder": "Votre adresse email",
-    "selectService": "Sélectionnez un service",
+    "emailPlaceholder": "Votre adresse e-mail",
+    "selectService": "Choisissez un service",
     "recharge": "Recharge de compte",
-    "deposit": "Dépôt d'argent",
-    "withdrawal": "Retrait d'argent",
+    "deposit": "Dépôt d’argent",
+    "withdrawal": "Retrait d’argent",
     "other": "Autre",
     "messagePlaceholder": "Décrivez votre demande...",
     "contactInfo": "Informations de contact",
-    "contactDescription": "Notre équipe est disponible 24h/24 et 7j/7 pour vous accompagner dans vos transactions 1xbet.",
+    "contactDescription": "Notre support est disponible 24/7. Support direct via WhatsApp.",
     "importantInfo": "Informations importantes",
-    "available24h": "Service disponible 24h/24",
-    "processing5min": "Traitement en moins de 5 minutes",
-    "multilingualSupport": "Support multilingue",
-    "secureTransactions": "Transactions sécurisées",
+    "available24h": "Support disponible 24/7",
+    "processing5min": "Recharge et retrait en seulement 5 minutes",
+    "multilingualSupport": "Toutes les banques marocaines sont supportées",
+    "secureTransactions": "Agent agréé et fiable par 1XBET",
     "thankYouMessage": "Merci pour votre message ! Nous vous contacterons bientôt."
   },
   "footer": {
-    "description": "Votre partenaire de confiance pour toutes vos transactions 1xbet",
-    "services": "Services",
+    "description": "",
+    "services": "Nos services",
     "quickLinks": "Liens rapides",
     "support": "Support",
     "legal": "Mentions légales",
     "privacy": "Politique de confidentialité",
-    "terms": "Conditions d'utilisation",
-    "howItWorks": "Comment ça marche",
-    "copyright": "© 2024 Chargify. Tous droits réservés.",
+    "terms": "Conditions d’utilisation",
+    "howItWorks": "Notre processus",
+    "copyright": "© 2025 Chargify. Tous droits réservés.",
     "service24h": "Service 24/7",
     "secure": "Sécurisé",
     "fast": "Rapide"
   },
   "promo": {
-    "title": "Promotion Chargify",
-    "subtitle": "Offre spéciale 👇",
-    "welcomeCode": "Profitez du code de bienvenue :",
+    "title": "Chargify PROMO",
+    "subtitle": "PROMO spéciale 👇",
+    "welcomeCode": "Profitez du code de bienvenue PROMO :",
     "code": "FLY255 🏷️",
-    "description": "Premier rechargement jusqu'à 2000 dirhams",
+    "description": "Première recharge jusqu’à 2000 MAD",
     "features": [
-      "⚡ Vitesse garantie : Rechargement et retrait en minutes seulement",
-      "🏦 Toutes les banques marocaines supportées",
+      "⚡ Rapidité garantie : recharge et retrait en seulement 5 minutes",
+      "🏦 Support de toutes les banques marocaines",
       "📞 Support direct via WhatsApp 24/7",
-      "🏠 Service de livraison à domicile",
+      "🏠 Livraison à domicile",
       "🔒 Confiance et sécurité 100%"
     ]
   },
   "faq": {
     "title": "Comment en profiter ?",
-    "subtitle": "Questions Fréquemment Posées",
+    "subtitle": "Questions fréquentes",
     "questions": [
       {
-        "question": "Que dois-je faire pour recharger ?",
-        "answer": "Juste votre ID + paiement."
+        "question": "De quoi ai-je besoin pour recharger ?",
+        "answer": "Seulement votre ID + paiement."
       },
       {
-        "question": "Comment recevoir mon argent ?",
-        "answer": "Via banque ou cash à domicile."
+        "question": "Comment puis-je recevoir mon argent ?",
+        "answer": "Via la banque ou en cash livré à domicile."
       },
       {
-        "question": "Y a-t-il un support la nuit ?",
-        "answer": "Oui, 24/7."
+        "question": "Y a-t-il un support de nuit ?",
+        "answer": "Oui, disponible 24/7."
+      },
+      {
+        "question": "Faut-il avoir un compte bancaire pour bénéficier du service ?",
+        "answer": "Non, vous pouvez aussi utiliser le cash et bénéficier de la livraison à domicile."
+      },
+      {
+        "question": "Combien de temps prend une recharge ou un retrait ?",
+        "answer": "En général 3 à 5 minutes seulement, rapidité toujours garantie."
+      },
+      {
+        "question": "Recharge et retrait sont-ils disponibles 24/7 ?",
+        "answer": "Oui, service disponible 24h/24 et 7j/7."
+      },
+      {
+        "question": "Quels sont les moyens de paiement disponibles chez Chargify ?",
+        "answer": "Virement bancaire, cash à la livraison ou selon accord."
+      },
+      {
+        "question": "Puis-je recharger n’importe quel montant ?",
+        "answer": "Oui, avec flexibilité, mais il y a un minimum et maximum convenus à l’avance."
+      },
+      {
+        "question": "Comment savoir que ma transaction a réussi ?",
+        "answer": "Vous recevez une confirmation directe via WhatsApp + capture d’écran de l’opération."
+      },
+      {
+        "question": "Y a-t-il des frais supplémentaires ?",
+        "answer": "Nos frais sont très réduits et clairement annoncés à l’avance."
       }
     ]
   },
   "stats": {
-    "satisfiedClients": "Clients Satisfaits",
+    "satisfiedClients": "Clients satisfaits",
     "transactions": "Transactions",
-    "averageTime": "Temps Moyen",
-    "successRate": "Taux de Réussite",
-    "averageRating": "Note Moyenne",
-    "availableSupport": "Support Disponible"
+    "averageTime": "Temps moyen",
+    "successRate": "Taux de réussite",
+    "averageRating": "Note moyenne",
+    "availableSupport": "Support disponible"
   },
   "common": {
     "loading": "Chargement...",
@@ -221,25 +279,25 @@
     "close": "Fermer",
     "next": "Suivant",
     "previous": "Précédent",
-    "submit": "Soumettre",
+    "submit": "Envoyer",
     "search": "Rechercher",
     "filter": "Filtrer",
     "sort": "Trier",
     "refresh": "Actualiser",
     "download": "Télécharger",
-    "upload": "Téléverser",
+    "upload": "Importer",
     "print": "Imprimer",
     "share": "Partager"
   },
   "whatsapp": {
     "title": "WhatsApp",
-    "contactUs": "Contactez-nous sur WhatsApp",
+    "contactUs": "Contactez-nous via WhatsApp",
     "phoneNumber": "+212 777-298195",
-    "defaultMessage": "Bonjour! Je voudrais des informations sur les services Chargify"
+    "defaultMessage": "Bonjour ! Je voudrais des informations sur les services de Chargify"
   },
   "banks": {
-    "title": "Banques Marocaines Supportées",
+    "title": "Banques marocaines que nous supportons",
     "subtitle": "Nous travaillons avec toutes les principales banques marocaines",
-    "description": "Nous fournissons nos services avec toutes les banques marocaines agréées, vous garantissant un accès facile à nos services depuis n'importe quelle banque."
+    "description": "Nous offrons nos services avec toutes les banques marocaines agréées, garantissant un accès facile à nos services depuis n’importe quelle banque."
   }
 }

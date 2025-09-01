@@ -2,10 +2,12 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import { useRTL } from '../hooks/useRTL';
+import { useLanguagePersistence } from '../hooks/useLanguagePersistence';
 
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
   const { isRTL } = useRTL();
+  const { persistLanguage, isLanguageSaved } = useLanguagePersistence();
   const [isOpen, setIsOpen] = React.useState(false);
   const dropdownRef = React.useRef(null);
   const buttonRef = React.useRef(null);
@@ -36,8 +38,18 @@ const LanguageSelector = () => {
 
   const changeLanguage = (lng) => {
     console.log('Changing language to:', lng);
+    
+    // Sauvegarder la langue dans localStorage et cookies
+    persistLanguage(lng);
+    
+    // Changer la langue
     i18n.changeLanguage(lng);
+    
+    // Fermer le dropdown
     setIsOpen(false);
+    
+    // Afficher une notification de sauvegarde
+    console.log(`Langue ${lng} sauvegardée pour la prochaine visite !`);
   };
 
   const toggleDropdown = () => {
@@ -77,7 +89,7 @@ const LanguageSelector = () => {
       <button 
         ref={buttonRef}
         onClick={toggleDropdown}
-        className={`flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-200 rounded-lg hover:bg-gray-100 ${isRTL ? 'flex-row-reverse' : ''}`}
+        className={`flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-primary-600 transition-colors duration-200 rounded-lg hover:bg-gray-100 ${isRTL ? 'flex-row-reverse' : ''} ${isLanguageSaved ? 'ring-2 ring-green-500 ring-opacity-50' : ''}`}
       >
         <span className="text-lg">
           {languages.find(lang => lang.code === i18n.language)?.flag || '🌐'}
@@ -85,6 +97,11 @@ const LanguageSelector = () => {
         <span className="hidden md:block text-sm font-medium">
           {languages.find(lang => lang.code === i18n.language)?.name || 'Language'}
         </span>
+        {isLanguageSaved && (
+          <span className="text-green-500 text-xs" title="Langue sauvegardée">
+            💾
+          </span>
+        )}
         <svg className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''} ${isRTL ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
