@@ -4,26 +4,34 @@ export const LANGUAGE_STORAGE_KEY = 'i18nextLng';
 // Sauvegarder la langue dans localStorage et cookies
 export const saveLanguage = (language) => {
   try {
+    console.log(`Saving language: ${language}`);
+    
     // Sauvegarder dans localStorage
     localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+    console.log(`Language saved to localStorage: ${language}`);
     
     // Sauvegarder dans cookies (expire dans 1 an)
     const expires = new Date();
     expires.setFullYear(expires.getFullYear() + 1);
     document.cookie = `${LANGUAGE_STORAGE_KEY}=${language};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
+    console.log(`Language saved to cookies: ${language}`);
     
-    console.log(`Language saved: ${language}`);
+    return true;
   } catch (error) {
     console.error('Error saving language:', error);
+    return false;
   }
 };
 
 // Récupérer la langue depuis localStorage ou cookies
 export const getSavedLanguage = () => {
   try {
+    console.log('Getting saved language...');
+    
     // Essayer localStorage d'abord
     const localStorageLang = localStorage.getItem(LANGUAGE_STORAGE_KEY);
     if (localStorageLang) {
+      console.log(`Found language in localStorage: ${localStorageLang}`);
       return localStorageLang;
     }
     
@@ -32,10 +40,12 @@ export const getSavedLanguage = () => {
     for (let cookie of cookies) {
       const [name, value] = cookie.trim().split('=');
       if (name === LANGUAGE_STORAGE_KEY) {
+        console.log(`Found language in cookies: ${value}`);
         return value;
       }
     }
     
+    console.log('No saved language found');
     return null;
   } catch (error) {
     console.error('Error getting saved language:', error);

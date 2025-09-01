@@ -3,11 +3,12 @@ import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
 import { useRTL } from '../hooks/useRTL';
 import { useLanguagePersistence } from '../hooks/useLanguagePersistence';
+import { getSavedLanguage } from '../utils/languageUtils';
 
 const LanguageSelector = () => {
   const { i18n } = useTranslation();
   const { isRTL } = useRTL();
-  const { persistLanguage, isLanguageSaved } = useLanguagePersistence();
+  const { persistLanguage, isLanguageSaved, checkLanguagePersistence } = useLanguagePersistence();
   const [isOpen, setIsOpen] = React.useState(false);
   const dropdownRef = React.useRef(null);
   const buttonRef = React.useRef(null);
@@ -27,7 +28,11 @@ const LanguageSelector = () => {
 
   // Surveiller les changements de langue
   React.useEffect(() => {
+    console.log('=== LANGUAGE SELECTOR DEBUG ===');
     console.log('Current language in component:', i18n.language);
+    console.log('Saved language from storage:', getSavedLanguage());
+    console.log('Persistence check result:', checkLanguagePersistence());
+    console.log('=== END LANGUAGE SELECTOR DEBUG ===');
   }, [i18n.language]);
 
   const languages = [
@@ -37,19 +42,31 @@ const LanguageSelector = () => {
   ];
 
   const changeLanguage = (lng) => {
+    console.log('=== LANGUAGE CHANGE DEBUG ===');
     console.log('Changing language to:', lng);
+    console.log('Current i18n language before change:', i18n.language);
     
     // Sauvegarder la langue dans localStorage et cookies
-    persistLanguage(lng);
+    const saveSuccess = persistLanguage(lng);
+    console.log('Language save success:', saveSuccess);
     
     // Changer la langue
     i18n.changeLanguage(lng);
+    console.log('Language changed via i18n');
+    
+    // Vérifier la persistance
+    setTimeout(() => {
+      const saved = getSavedLanguage();
+      console.log('Language persistence verification - saved:', saved, 'current:', i18n.language);
+      console.log('Persistence check result:', checkLanguagePersistence());
+    }, 100);
     
     // Fermer le dropdown
     setIsOpen(false);
     
     // Afficher une notification de sauvegarde
     console.log(`Langue ${lng} sauvegardée pour la prochaine visite !`);
+    console.log('=== END LANGUAGE CHANGE DEBUG ===');
   };
 
   const toggleDropdown = () => {

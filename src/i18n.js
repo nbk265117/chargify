@@ -49,7 +49,6 @@ i18n
 
     // Configuration pour le RTL
     supportedLngs: ['ar', 'fr', 'en'],
-    lng: 'ar',
     
     // Gestion automatique du RTL
     postProcess: ['rtl'],
@@ -71,16 +70,51 @@ const initializeRTL = () => {
   }
 };
 
-// Récupérer la langue sauvegardée ou utiliser la langue par défaut
-const savedLanguage = getSavedLanguage();
-const defaultLanguage = getDefaultLanguage();
-const initialLanguage = savedLanguage && isSupportedLanguage(savedLanguage) ? savedLanguage : defaultLanguage;
+// Attendre que i18n soit complètement initialisé
+const initializeLanguage = async () => {
+  try {
+    // Récupérer la langue sauvegardée
+    const savedLanguage = getSavedLanguage();
+    const defaultLanguage = getDefaultLanguage();
+    
+    console.log('Saved language from storage:', savedLanguage);
+    console.log('Default language:', defaultLanguage);
+    
+    // Déterminer la langue initiale
+    let initialLanguage = 'ar'; // Fallback par défaut
+    
+    if (savedLanguage && isSupportedLanguage(savedLanguage)) {
+      initialLanguage = savedLanguage;
+      console.log('Using saved language:', initialLanguage);
+    } else if (defaultLanguage && isSupportedLanguage(defaultLanguage)) {
+      initialLanguage = defaultLanguage;
+      console.log('Using browser language:', initialLanguage);
+    } else {
+      console.log('Using fallback language: ar');
+    }
+    
+    // Forcer le changement de langue
+    await i18n.changeLanguage(initialLanguage);
+    
+    // Initialiser RTL
+    initializeRTL();
+    
+    console.log('i18n initialized with language:', i18n.language);
+    console.log('Final language set:', initialLanguage);
+    
+  } catch (error) {
+    console.error('Error initializing language:', error);
+    // Fallback vers l'arabe en cas d'erreur
+    await i18n.changeLanguage('ar');
+    initializeRTL();
+  }
+};
 
-// Initialiser avec la langue déterminée
-i18n.changeLanguage(initialLanguage);
-
-// Initialiser RTL au démarrage
-initializeRTL();
+// Initialiser la langue après que i18n soit prêt
+i18n.on('initialized', () => {
+  console.log('i18n initialized event fired');
+  initializeLanguage();
+});
 
 // Écouter les changements de langue
 i18n.on('languageChanged', (lng) => {
@@ -88,10 +122,9 @@ i18n.on('languageChanged', (lng) => {
   initializeRTL();
 });
 
-// Debug: Log the current language
-console.log('i18n initialized with language:', i18n.language);
-console.log('Saved language from storage:', savedLanguage);
-console.log('Default language:', defaultLanguage);
-console.log('Initial language used:', initialLanguage);
+// Initialisation immédiate si i18n est déjà prêt
+if (i18n.isInitialized) {
+  initializeLanguage();
+}
 
 export default i18n;
